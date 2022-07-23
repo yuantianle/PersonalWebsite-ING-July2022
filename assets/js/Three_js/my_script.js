@@ -14,24 +14,23 @@ function init()
 {
      initScene(); 
      initCamera();
-
      initRenender();
-     initOthers();
-
+     
      initLight();
      setWindown();
-
      setGeometrys();
 
-     //setControl();
+     initOthers();
+
+     setControl();
      setEventsMouse();
-     setKeyEvents();     
+     setKeyEvents(); 
+     refreshWindown();    
     
-     //setStatusMontor();
+     setStatusMontor();
+
+     loop();
 }
-
-init();//initiate
-
 
 /*-------------------------------
      Scene
@@ -64,24 +63,30 @@ function initRenender()
      renderer.setClearColor(new THREE.Color(0x000000));
      renderer.shadowMap.enabled = true;
 }
-function initOthers()
-{
-     document.body.appendChild( renderer.domElement ); //append canvas object into body element
-}
+
 
 /*-------------------------------
      Adaptive window size monitor
 --------------------------------*/
-function setWindown(){
+function refreshWindown(){
      //add event monitor, adapt the window
      window.addEventListener('resize', function(){
-         var width = window.innerWidth;
-         var height = window.innerHeight;
+         var width = window.innerWidth*0.82;
+         var height = window.innerHeight*0.7;
          renderer.setSize(width,height);
          camera.aspect = width/height;
          camera.updateProjectionMatrix();
          renderer.render( scene, camera );
      });
+}
+
+function setWindown(){
+     var width = window.innerWidth*0.82;
+     var height = window.innerHeight*0.7;
+     renderer.setSize(width,height);
+     camera.aspect = width/height;
+     camera.updateProjectionMatrix();
+     renderer.render( scene, camera );
 }
 
 /*-------------------------------
@@ -129,19 +134,40 @@ function setGeometrys()
      cube.castShadow  = true;
 }
 
+function initOthers()
+{
+     document.getElementById('webgl-output').appendChild(renderer.domElement); //append three.js canvas object into body element
+     renderer.render(scene, camera);
+}
+
 /*-------------------------------
      Control
---------------------------------
+--------------------------------*/
 function setControl()
 {
      //orbit for camera movement
-     controls = new THREE.OrbitControls(camera,renderer.document);
+     controls = new THREE.OrbitControls(camera,renderer.domElement);
+     controls.addEventListener('change', () => {
+          renderer.render(scene, camera)
+     })
+     //object 3Ding
+     //effect = new THREE.AnaglyphEffect(renderer);
+     //effect.setSize(window.innerWidth, window.innerHeight);
+}
 
-      //object 3Ding
-     effect = new THREE.AnaglyphEffect(renderer);
-     effect.setSize(window.innerWidth, window.innerHeight);
-}*/
-
+//add GUI
+function setGUI()
+{
+     const gui = new GUI()
+     const cubeFolder = gui.addFolder('Cube')
+     cubeFolder.add(cube.rotation, 'x', 0, Math.PI * 2)
+     cubeFolder.add(cube.rotation, 'y', 0, Math.PI * 2)
+     cubeFolder.add(cube.rotation, 'z', 0, Math.PI * 2)
+     cubeFolder.open()
+     const cameraFolder = gui.addFolder('Camera')
+     cameraFolder.add(camera.position, 'z', 0, 10)
+     cameraFolder.open()
+}
 //Define mouse event
 function setEventsMouse(){
     //left
@@ -171,15 +197,13 @@ function setKeyEvents(){
 
 /*-------------------------------
      Status monitor
---------------------------------
+--------------------------------*/
 function setStatusMontor()
 {
      stats = new Stats();
      stats.showPanel( 0 );
-     document.body.appendChild( stats.dom );
-}*/
-
-
+     document.body.appendChild( stats.domElement);
+}
 
 /*-------------------------------
      Logic & Animate
@@ -211,23 +235,7 @@ var loop=function() {
      requestAnimationFrame(loop);
      update();
      animate();
+     stats.update();
 }
 
-loop();
-
-
-
-/*-------------------------------
-     Adaptive window size monitor
---------------------------------
-window.onresize=function(){
-    // Reset the renderer, output canvas size
-    renderer.setSize(window.innerWidth,window.innerHeight);
-    // In full screen mode: Set the aspect ratio of the viewing range to the aspect ratio of the window
-    camera.aspect = window.innerWidth/window.innerHeight;
-    // The renderer executes the render method and reads the camera object's projectionMatrix property
-    // However, the projection matrix will not be calculated by the attributes of the camera every frame rendering (saving computing resources). 
-    // If some attributes of the camera change, the "updateProjectionMatrix ()" method needs to be executed to update the projection matrix of the camera
-    camera.updateProjectionMatrix ();
-    renderer.render( scene, camera );
-};*/
+window.onload = init

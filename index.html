@@ -23,7 +23,9 @@
     <script src="assets/lib/components-modernizr/modernizr.js"></script>  <!-- for java script citation-->
     <script src="assets/lib/jquery/dist/jquery.js"></script>
     <script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
+    
 
+    
 </head>
 
 <body data-spy="scroll" data-target="#main-nav-collapse" data-offset="100">
@@ -913,60 +915,24 @@
 			<h2>Shader Pool</h2>
 			<span>Enjoy samll math application here</span>
 		</header>
-    
-	
-		<div id="mainContent">
-			<!--<div id="sidebar">
 
-				<div><span class="sidebarLinkbar"><a href="http://www.graphycalc.com/#" id="helplink">Help</a></span></div>
-				<div><input id="equationinput" value="Loading..."></div>
-				<div>
-					<span class="sidebarHalfCell"><input id="smoothcheck" type="checkbox"><label for="smoothcheck">smooth curves</label></span>
-					<span class="xyRadios"><input type="radio" id="radio_xy" name="xyradios"><label for="radio_xy">xy</label></span>
-					<span class="xyRadios"><input type="radio" id="radio_x" name="xyradios"><label for="radio_x">x</label></span>
-					<span class="xyRadios"><input type="radio" id="radio_y" name="xyradios"><label for="radio_y">y</label></span>
-				</div>
-	
-				<div id="help"><p>GraphyCalc is a 3d graphing calculator, allowing you to interactively explore 3d functions.</p>
-					<p><b>Examples</b>:
-					<a href="http://www.graphycalc.com/#" id="ex_sinc">sinc</a>
-					<a href="http://www.graphycalc.com/#" id="ex_exp">exp</a>
-					<a href="http://www.graphycalc.com/#" id="ex_dome">dome</a>
-					</p>
-					<p>Nerdy Details: The formula you supply calculates the height <i>z</i> from the variables <i>x</i> and <i>y</i> between <i>-1</i> and <i>1</i>. Formulas are composed of arithmetic operators (<i style="white-space: nowrap">+ - * / ^</i>), built-in functions (<i>abs acos asin atan ceil cos exp floor log round sin sinc sqrt tan</i>), and constants (<i>E PI</i>).</p>
-				</div>
-			</div>
-	
-			<div class="canvasDiv">
-				<canvas id="canvas" width="1100" height="600">
-					<div id="nocanvas">
-						<p class="centeredBlock" style="margin-top: 10em">
-						GraphyCalc is a 3d graphing calculator, allowing you to interactively explore graphs of 3d functions.  This experience is built using some modern web technology that your browser unfortunately does not support.  But don't give up yet, you have several great ways to join the cutting edge.
-						<br><br>
-						<a href="http://www.google.com/chrome">Google Chrome</a><br>
-						<a href="http://www.apple.com/safari/">Apple Safari</a><br>
-						<a href="http://www.mozilla.com/firefox/">Mozilla Firefox</a><br>
-						<a href="http://www.opera.com/">Opera</a><br>
-						</p>
-					</div>
-				</canvas>
-			</div> -->
-			
-<!--for Webgl-->
-<!--<canvas id="glcanvas" width="700" height="550"></canvas>-->
-<!--for Webgl-->
-
-<!--for three.js -->		
-
-<script src="assets/js/Three_js/three.js"></script>
-<script src="assets/js/Three_js/my_script.js"></script>
-<script type="module" src='assets/js/Three_js/effects/AnaglyphEffect.js'></script>
-<script type="module" src='assets/js/Three_js/controls/OrbitControls.js'></script>
-<script type="module" src='assets/jsm/libs/stats.module.js'></script>
-<!--for three.js -->	
-
-			
-		</div>
+        <div class="section-content">
+            <!--for Webgl-->
+            <!--<canvas id="glcanvas" width="700" height="550"></canvas>-->
+            <!--for Webgl-->
+            
+            <!--for three.js -->		
+            <div id="webgl-output"></div>
+            <script src="assets/js/Three_js/libs/build/three.js"></script>
+            <script src='assets/js/Three_js/libs/js/controls/OrbitControls.js'></script>
+            <script src='assets/js/Three_js/libs/js/effects/AnaglyphEffect.js'></script>
+            <script src='assets/js/Three_js/libs/js/libs/stats.min.js'></script>
+            <script src='assets/js/Three_js/libs/dat.gui.js'></script>
+            <script src="assets/js/Three_js/my_script.js"></script>
+            <!--for three.js -->	
+            
+        </div>
+		
 	</div><!-- container -->
 </section>
 <!-- #relax zone-->
