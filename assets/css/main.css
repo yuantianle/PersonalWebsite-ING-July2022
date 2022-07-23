@@ -38,6 +38,22 @@ video {
 }*/
 
 /*-----------------------------------------
+    GUI setting
+------------------------------------------*/
+#statsContainer {
+  position: relative;
+  top: 20%;  
+  left: 91%;   
+}
+#guiContainer
+{
+  position: absolute;
+  top: 17.1%;  
+  left: 2%;   
+  /*border: solid 2px rgb(128, 0, 0);*/ 
+}
+
+/*-----------------------------------------
     BGM player style
 ------------------------------------------*/
 
