@@ -5,7 +5,8 @@ import {OrbitControls} from 'assets/js/Three_js/controls/OrbitControls.js';
 OrbitControls = require('assets/js/Three_js/controls/OrbitControls.js');
 import Stats from 'assets/jsm/libs/stats.module.js';*/
 
-var scene,camera,renderer,controls,stats, axes, plane, cube;
+var scene,camera,renderer,textureLoader;
+var controls,stats, axes, plane, cube;
 
 /*-------------------------------
      Initiation
@@ -18,6 +19,7 @@ function init()
      
      initLight();
      setWindown();
+     initTextureLoader();
      setGeometrys();
 
      initOthers();
@@ -95,10 +97,15 @@ function setWindown(){
 function initLight()
 {
      var spotLight = new THREE.SpotLight( 0xffffff );
-     spotLight.position.set( -40, 60, -10 );
+     spotLight.position.set( 0, 60, 0 );
      scene.add( spotLight );
      // Set projection
      spotLight.castShadow = true;
+}
+
+function initTextureLoader()
+{
+     textureLoader = new THREE.TextureLoader();
 }
 
 /*-------------------------------
@@ -111,11 +118,13 @@ function setGeometrys()
      scene.add(axes);
 
      //---2.Relative ground-------------
-     var planeGeometry = new THREE.PlaneGeometry(60, 20, 1, 1);
-     var planeMaterial = new THREE.MeshLambertMaterial({color: 0xcccccc});
+     var planeGeometry = new THREE.PlaneGeometry(10, 10, 1, 1);
+     const planeTexture = textureLoader.load("assets/js/Three_js/mark.jpg");
+     const planeMaterial = new THREE.MeshPhongMaterial({ map: planeTexture, color: 0xffffff, specular:0x4488ee, shininess:12 });
      plane = new THREE.Mesh(planeGeometry, planeMaterial);
+     
      plane.rotation.x = -0.5 * Math.PI;
-     plane.position.x = 15
+     plane.position.x = 0
      plane.position.y = 0
      plane.position.z = 0
      scene.add(plane);
@@ -124,7 +133,52 @@ function setGeometrys()
 
      //---3.Object-----------------------
      var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-     var material = new THREE.MeshPhongMaterial( { color: 0x00ffff, specular:0x4488ee, shininess:12} );
+     
+     const options = {
+          enableSwoopingCamera: false,
+          enableRotation: true,
+          transmission: 1,
+          thickness: 1.2,
+          roughness: 0.6,
+          envMapIntensity: 1.5,
+          clearcoat: 1,
+          clearcoatRoughness: 0.1,
+          normalScale: 1,
+          clearcoatNormalScale: 0.3,
+          normalRepeat: 1,
+          bloomThreshold: 0.85,
+          bloomStrength: 0.5,
+          bloomRadius: 0.33,
+        };
+
+     //var material = new THREE.MeshPhongMaterial( { color: 0x00ffff, specular:0x4488ee, shininess:12} );
+     const normalMapTexture = textureLoader.load("assets/js/Three_js/noise_normal.jpg");
+     normalMapTexture.wrapS = THREE.RepeatWrapping;
+     normalMapTexture.wrapT = THREE.RepeatWrapping;
+     normalMapTexture.repeat.set(options.normalRepeat, options.normalRepeat);
+     
+     const hdrEquirect = new THREE.RGBELoader().load(
+          "assets/js/Three_js/royal_esplanade_4k.hdr",
+          () => {
+            hdrEquirect.mapping = THREE.EquirectangularReflectionMapping;
+            scene.background = hdrEquirect;
+            scene.enviroment = hdrEquirect;
+          }
+        );
+     
+     var material = new THREE.MeshPhysicalMaterial({
+          transmission: options.transmission,
+          thickness: options.thickness,
+          roughness: options.roughness,
+          envMap: hdrEquirect,
+          envMapIntensity: options.envMapIntensity,
+          clearcoat: options.clearcoat,
+          clearcoatRoughness: options.clearcoatRoughness,
+          normalScale: new THREE.Vector2(options.normalScale),
+          normalMap: normalMapTexture,
+          clearcoatNormalMap: normalMapTexture,
+          clearcoatNormalScale: new THREE.Vector2(options.clearcoatNormalScale),
+     });
      cube = new THREE.Mesh( geometry, material );
      cube.position.x = 0;
      cube.position.y = 2;
@@ -154,17 +208,16 @@ function setControl()
      //effect = new THREE.AnaglyphEffect(renderer);
      //effect.setSize(window.innerWidth, window.innerHeight);
 }
-
 //add GUI
 function setGUI()
 {
      const gui = new GUI()
-     const cubeFolder = gui.addFolder('Cube')
+     const cubeFolder = gui.addFolder('cube')
      cubeFolder.add(cube.rotation, 'x', 0, Math.PI * 2)
      cubeFolder.add(cube.rotation, 'y', 0, Math.PI * 2)
      cubeFolder.add(cube.rotation, 'z', 0, Math.PI * 2)
      cubeFolder.open()
-     const cameraFolder = gui.addFolder('Camera')
+     const cameraFolder = gui.addFolder('camera')
      cameraFolder.add(camera.position, 'z', 0, 10)
      cameraFolder.open()
 }
