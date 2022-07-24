@@ -24,12 +24,11 @@
     <script src="assets/lib/jquery/dist/jquery.js"></script>
     <script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
     
-
-    
 </head>
 
 <body data-spy="scroll" data-target="#main-nav-collapse" data-offset="100">
 
+		
 
 <div class="page-loader">
     <div class="loader">Loading...</div>
@@ -38,7 +37,7 @@
 <nav id="fixedTopNav" class="navbar navbar-fixed-top main-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement" >
     <div class="container">
         <div class="navbar-header">
-			
+
 			<!--BGM!!!autoplay-->
 			<audio  loop src="assets/bgm/Sophis.mp3" controls>
 				<embed 
@@ -47,11 +46,10 @@
 					height="90"
 					loop="true"
 					autostart="true">
-					
 				<p>If you are reading this, it is because your browser does not support the audio element.</p>
-
 			</audio>
-        
+                
+
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="ion-drag"></span>
@@ -62,37 +60,71 @@
         <!-- Navigation Links -->
         <div class="collapse navbar-collapse" id="main-nav-collapse">
             <ul class="nav navbar-nav navbar-right">
+
                 <li><a href="#about-us" itemprop="url">
-                    <span itemprop="name">About</span>
+                    <span itemprop="name">
+                        About
+                        <!--{en}About-->
+                        <!--{cn}关于我-->
+                    </span>
                 </a></li>
 
                 <li><a href="#projects" itemprop="url">
-                    <span itemprop="name">Projects</span>
+                    <span itemprop="name">
+                        Projects
+                        <!--{en}Projects-->
+                        <!--{cn}项目经历-->
+                    </span>
                 </a></li>
 
                 <li><a href="#services" itemprop="url">
-                    <span itemprop="name">Skills</span>
+                    <span itemprop="name">
+                        Skills
+                        <!--{en}Skills-->
+                        <!--{cn}个人专长-->
+                    </span>
                 </a></li>
 				
 				<li><a href="#gallery" itemprop="url">
-                    <span itemprop="name">Paintings</span>
+                    <span itemprop="name">
+                        Paintings
+                        <!--{en}Paintings-->
+                        <!--{cn}绘画册-->
+                    </span>
                 </a></li>
 				
 				<li><a href="#photo" itemprop="url">
-                    <span itemprop="name">Photography</span>
+                    <span itemprop="name">
+                        Photography
+                        <!--{en}Photography-->
+                        <!--{cn}摄影集-->
+                    </span>
                 </a></li>
 				
 				<li><a href="#graphics" itemprop="url">
-                    <span itemprop="name">Shaderpool</span>
+                    <span itemprop="name">
+                        Shaderpool
+                        <!--{en}Shaderpool-->
+                        <!--{cn}图形天地-->
+                    </span>
                 </a></li>
 				
                 <li><a href="#contact" itemprop="url">
-                    <span itemprop="name">Contact</span>
+                    <span itemprop="name">
+                        Contact
+                        <!--{en}Contact-->
+                        <!--{cn}联系我-->
+                    </span>
                 </a></li>
-			
+                
             </ul>
         </div>
         <!-- /Navigation Links -->
+
+        <div>
+            <a href="javascript:tran.setLang('en');">English</a>
+            <a href="javascript:tran.setLang('cn');">中文</a>
+        </div>
 
     </div><!-- /.container -->
 </nav>
@@ -103,9 +135,19 @@
     <div class="color-overlay"></div>
     <div class="header-wrapper-inner">
         <div class="move-container container">
-            <div class="intro move-text"></div>
+            <div class="intro move-text">
+                <span id = "movecontent" class="text-to-hide"> 
+                    Hi there,-I'm Tianle-Glad to see you
+                    <!--{en}Hi there,-I'm Tianle-Glad to see you-->
+                    <!--{cn}你好-我是天乐-很高兴见到你-->
+                </span>
+            </div>
             <div class="intro">
-                <a href="Tianle Yuan_Resume.pdf" download class="btn btn-default-o">Download Resume</a>
+                <a href="Tianle Yuan_Resume.pdf" download class="btn btn-default-o">
+                    Download Resume
+                    <!--{en}Download Resume-->
+                    <!--{cn}查阅简历（英文）-->
+                </a>
             </div><!-- /.intro -->
 
         </div><!-- /.container -->
@@ -127,8 +169,11 @@
 
         <!---->
         <header class="section-heading" style="margin-bottom: 50px">
-            <h2>About Me</h2>
-            <span>Everything you need to know</span>
+            <h2>About Me<!--{en}About Me--><!--{cn}关于我--></h2>
+            <span>Everything you need to know
+                <!--{en}Everything you need to know-->
+                <!--{cn}万般皆下品，惟有读书高-->
+            </span>
         </header><!-- section-heading -->
         <!---->
 
@@ -138,8 +183,12 @@
 
                     <!-- about-left -->
                     <div class="about-content left">
-                        <h4>OSU Student</h4>
-                        <p>I am a graduate student studying Computer Science at Oregon State University (OSU). I did research on multi-physical crack generation in Computer Graphics. I am right now exploring the feasibility of arts generated by computer graphics. I also enjoy modern art, Van Gogh and Monet are my favorite painters. Aside from art, electronic synthesizers and photography are indispensable parts of my life.</p>
+                        <h4>OSU Student<!--{en}OSU Student--><!--{cn}俄勒冈州立大学研究生--></h4>
+                        <p>
+                            I am a graduate student studying Computer Science at Oregon State University (OSU). I did research on multi-physical crack generation in Computer Graphics. I am right now exploring the feasibility of arts generated by computer graphics. I also enjoy modern art, Van Gogh and Monet are my favorite painters. Aside from art, electronic synthesizers and photography are indispensable parts of my life.
+                            <!--{en}I am a graduate student studying Computer Science at Oregon State University (OSU). I did research on multi-physical crack generation in Computer Graphics. I am right now exploring the feasibility of arts generated by computer graphics. I also enjoy modern art, Van Gogh and Monet are my favorite painters. Aside from art, electronic synthesizers and photography are indispensable parts of my life.-->
+                            <!--{cn}我是俄勒冈州立大学，计算机科学专业的一名研究生。我在计算机图形学中做过基于多重物理条件的裂纹生成的研究。我现在正在探索计算机图形生成艺术的可能。对于现代艺术，梵高和莫奈是我最喜欢的画家。除了艺术，电子合成器和摄影是我生活中不可缺少的部分。-->
+                        </p>
                     </div>
 
                 </div><!-- col-sm-4 -->
@@ -157,8 +206,16 @@
 
                     <!-- about-right -->
                     <div class="about-content right">
-                        <h4>Computer Generated Art</h4>
-                        <p>I am comfortable with geometric modeling, numerical methods based on mathematical physics equations, and GUI design. Personally, I use C++, GLSL, Python, Matlab, Comsol, Qt, Unity for daily projects. I am looking for jobs related to game development, computer graphics, and Software engineering.</p>
+                        <h4>
+                            Computer Generated Art & Scientific Visualization
+                            <!--{en}Computer Generated Art & Scientific Visualization-->
+                            <!--{cn}计算机生成艺术与科学可视化-->
+                        </h4>
+                        <p>
+                            I am comfortable with geometric modeling, numerical methods based on mathematical physics equations, and GUI design. Personally, I use C++, GLSL, Python, Matlab, Comsol, Qt, Unity for daily projects. I am looking for jobs related to game development, computer graphics, and Software engineering.
+                            <!--{en}I am comfortable with geometric modeling, numerical methods based on mathematical physics equations, and GUI design. Personally, I use C++, GLSL, Python, Matlab, Comsol, Qt, Unity for daily projects. I am looking for jobs related to game development, computer graphics, and Software engineering.-->
+                            <!--{cn}我擅长几何建模，基于数学物理方程的数值方法和GUI设计。我个人通常使用c++、GLSL、Python、Matlab、Comsol、Qt、Unity作为日常项目的开发与研究工具。我真正寻找与游戏开发、计算机绘图和软件工程相关的工作。-->
+                        </p>
                     </div>
 
                 </div><!-- col-sm-4 -->
@@ -178,7 +235,8 @@
 
                 <!-- video-left -->
                 <div class="video-left">
-                    Github<br>Projects
+                    Github<!--{en}Github--><!--{cn}Github-->
+                    <br>Projects<!--{en}Projects--><!--{cn}项目-->
                 </div>
 
             </div><!-- col-sm-4 -->
@@ -196,7 +254,10 @@
 
                 <!-- video-right -->
                 <div class="video-right">
-                    Graphic exploration is endless<br>Why not take pleasure out of misery
+                    Graphic exploration is endless
+                    <!--{en}Graphic exploration is endless--><!--{cn}图形学探索永无止境，-->
+                    <br>Why not take pleasure out of misery
+                    <!--{en}Why not take pleasure out of misery--><!--{cn}何不苦中作乐一番。-->
                 </div>
 
             </div><!-- col-sm-4 -->
@@ -213,8 +274,12 @@
 	<div class="gradient-overlay"></div>
     <div class="container">
         <header class="section-heading" style="margin-bottom: 50px">
-            <h2>Project Collection</h2>
-            <span>My project areas include computer graphics rendering, geometric modeling, numerical visualization, and computer vision.</span>
+            <h2>Project Collection<!--{en}Project Collection--><!--{cn}项目经历--></h2>
+            <span>
+                My project areas include computer graphics rendering, computer animation, game development, geometric modeling, numerical visualization, and computer vision.
+                <!--{en}My project areas include computer graphics rendering, computer animation, game development, geometric modeling, numerical visualization, and computer vision.-->
+                <!--{cn}我的项目领域倾向于：计算机图形渲染，计算机动画，游戏开发，几何建模，数值可视化以及计算机视觉-->
+            </span>
         </header>
         <!---->
 
@@ -306,7 +371,7 @@
             </ul>
 			<div class = "col-md-12">
 					<button class="btn btn-dark btn-block fold-button" type="button" ins-controls="#pg-grid">
-							Load More
+							Load More<!--{en}Load More--><!--{cn}展开更多-->
 					</button>
 			</div>
         </div><!-- section-content -->
@@ -322,8 +387,12 @@
 
         <!---->
         <header class="section-heading" style="margin-bottom: 0px">
-            <h2>My Skills</h2>
-            <span></span>
+            <h2>My Skills<!--{en}My Skills--><!--{cn}个人专长--></h2>
+            <span>
+                Starting from what I love seems to be the only way for me to constantly improve myself
+                <!--{en}Starting from what I love seems to be the only way for me to constantly improve myself-->
+                <!--{cn}从自己热爱的事情出发，似乎成为了我不断前进、完善自己的不二法门。-->
+            </span>
         </header>
         <!---->
 
@@ -337,8 +406,12 @@
                             <span class="ion-code-working"></span>
                         </div>
                         <div class="about-service">
-                            <h4 class="text-center">Software</h4>
-                            <p class="text-center">I'm primarily a C/C++ programmer, who most of the time does object-oriented programming. I also have extensive experience with Qt and command line and have worked with NumPy for machine learning applications. For front-end, I have the basic skills of HTML/CSS.</p>
+                            <h4 class="text-center">Software<!--{en}Software--><!--{cn}计算机软件--></h4>
+                            <p class="text-center">
+                                I'm primarily a C/C++ programmer, who most of the time does object-oriented programming. I also have extensive experience with Qt and command line and have worked with NumPy for machine learning applications. For front-end, I have the basic skills of HTML5/CSS/JS.
+                                <!--{en}I'm primarily a C/C++ programmer, who most of the time does object-oriented programming. I also have extensive experience with Qt and command line and have worked with NumPy for machine learning applications. For front-end, I have the basic skills of HTML5/CSS/JS.-->
+                                <!--{cn}我是一位以C/ c++为主要开发工具的程序员。大部分时间我在做面向对象的编程。我在Qt和命令行方面也有丰富的经验。曾使用NumPy用于机器学习应用程序。对于前端网页设计，我掌握基本的HTML5/CSS/JS运作流程。-->
+                            </p>
 						</div>
                     </div>
 
@@ -352,9 +425,11 @@
                             <span class="ion-ios-albums"></span>
                         </div>
                         <div class="about-service">
-                            <h4 class="text-center">Geometry modeling</h4>
+                            <h4 class="text-center">Geometry modeling & Scientific visualization<!--{en}Geometry modeling & Scientific visualization--><!--{cn}几何建模--></h4>
                             <p class="text-center">
-                                I have strong abilities of symbolic understanding and logical analysis, which are thanks to my undergraduate mathematics professional training. I have strong capabilities in constructing geometric, static, and physical models. I'm also great with Matlab!  
+                                I have strong abilities of symbolic understanding and logical analysis, which are thanks to my undergraduate mathematics professional training. I have strong capabilities in constructing geometric, numerical, and physical models. I'm also great with Matlab!  
+                                <!--{en}I have strong abilities of symbolic understanding and logical analysis, which are thanks to my undergraduate mathematics professional training. I have strong capabilities in constructing geometric, numerical, and physical models. I'm also great with Matlab!-->
+                                <!--{cn}得益于本科在数学专业的刻苦训练，我有较强的符号与公式理解能力和逻辑分析能力。我有很强的几何模型、数值模型和物理模型的构建能力。我对Matlab也很在行!-->
                             </p>
                         </div>
                     </div>
@@ -369,9 +444,11 @@
                             <span class="ion-android-color-palette"></span>
                         </div>
                         <div class="about-service">
-                            <h4 class="text-center">Arts</h4>
+                            <h4 class="text-center">Arts<!--{en}Arts--><!--{cn}艺术--></h4>
                             <p class="text-center">
                                 I'm a self-taught art creator who usually product traditional paints, photography works, and multi-track audio. My artistic sensitivity has helped me a lot in the direction of computer-generated art.
+                                <!--{en}I'm a self-taught art creator who usually product traditional paints, photography works, and multi-track audio. My artistic sensitivity has helped me a lot in the direction of computer-generated art.-->
+                                <!--{cn}我是一个自学成才的艺术创作者。当然这也得益于我出生于艺术家庭。我热衷于创作传统绘画、摄影作品和多轨音频剪辑。我的艺术敏感性为我在计算机生成艺术领域的探索上做了铺垫。-->
                             </p>
                         </div>
                     </div>
@@ -388,8 +465,12 @@
 	<div class="color-overlay"></div>
     <div class="container">
         <header class="section-heading" style="margin-bottom: 50px">
-            <h2>Art Portfolio</h2>
-            <span>Love of life comes from the observation of beauty</span>
+            <h2>Art Portfolio<!--{en}Art Portfolio--><!--{cn}绘画册--></h2>
+            <span>
+                Love of life comes from the observation of beauty
+                <!--{en}Love of life comes from the observation of beauty-->
+                <!--{cn}对生活的热爱常常来自于对美的审视。-->
+            </span>
         </header>
         <!---->
 
@@ -460,7 +541,7 @@
             </ul>
 			<div class = "col-md-12">
 					<button class="btn btn-dark btn-block fold-button" type="button" ins-controls="#og-grid">
-							Load More
+							Load More<!--{en}Load More--><!--{cn}展开更多-->
 					</button>
 			</div>
 
@@ -474,8 +555,12 @@
 	<div class="gradient-overlay"></div>
     <div class="container">
         <header class="section-heading" style="margin-bottom: 50px">
-            <h2>Photography Portfolio</h2>
-            <span>Since the wonderful moment is fleeting, I might as well be the person seize it</span>
+            <h2>Photography Portfolio<!--{en}Photography Portfolio--><!--{cn}摄影集--></h2>
+            <span>
+                Since the wonderful moment is fleeting, I might as well be the person seize it
+                <!--{en}Since the wonderful moment is fleeting, I might as well be the person seize it-->
+                <!--{cn}完美的片段转瞬即逝，我将用快门让其永驻。-->
+            </span>
         </header>
         <!---->
 
@@ -764,7 +849,7 @@
 			
 			<div class="col-md-12">
                 <button class="btn btn-dark btn-block fold-button" type="button" ins-controls="#og-grid1">
-                        Load More
+                        Load More<!--{en}Load More--><!--{cn}展开更多-->
                 </button>
             </div>  
         </div><!-- section-content -->
@@ -779,8 +864,12 @@
     <div class="color-overlay"></div>
     <div class="container">
         <header class="section-heading">
-            <h2>Expertise</h2>
-            <span>A bit of background on my skills</span>
+            <h2>Expertise<!--{en}Expertise--><!--{cn}熟练度评分--></h2>
+            <span>
+                A bit of background on my skills
+                <!--{en}A bit of background on my skills-->
+                <!--{cn}我对于日常使用的工具的熟练度进行的评分。-->
+            </span>
         </header>
 
         <div class="section-content">
@@ -804,7 +893,11 @@
 									<i class="fa fa-file-code-o fa-4x" style="padding-top:1.8vh"></i>
                                 </div>
                                 <div class="tab-right">
-                                    <p>I have experience in object-oriented programming for three years. Most of my previous projects are based on C++, especially in the computer graphics field. I master the libraries like QT, OpenCV, GLUT, CGAL, and Boost.</p>
+                                    <p>
+                                        I have experience in object-oriented programming for four years. Most of my previous projects are based on C++, especially in the computer graphics field. I master the libraries like QT, OpenCV, GLUT, CGAL, and Boost.
+                                        <!--{en}I have experience in object-oriented programming for four years. Most of my previous projects are based on C++, especially in the computer graphics field. I master the libraries like QT, OpenCV, GLUT, CGAL, and Boost.-->
+                                        <!--{cn}我有四年面向对象编程的经验。我以前的大部分项目都是基于c++的，尤其是在计算机图形领域。我精通QT、OpenCV、GLUT、CGAL和Boost等库。-->
+                                    </p>
                                 </div>
                             </div>
 
@@ -814,7 +907,11 @@
 									<!--<i class="ion-analytics" style="font-size:5em"></i>-->
                                 </div>
                                 <div class="tab-right">
-                                    <p>I started learning MATLAB since I was an undergraduate. I am good at using MATLAB to solve the problems for Least Squares, Numerical Analysis, Image Processing, and Signal Processing.</p>
+                                    <p>
+                                        I started learning MATLAB since I was an undergraduate. I am good at using MATLAB to solve the problems for Least Squares, Numerical Analysis, Image Processing, and Signal Processing.
+                                        <!--{en}I started learning MATLAB since I was an undergraduate. I am good at using MATLAB to solve the problems for Least Squares, Numerical Analysis, Image Processing, and Signal Processing.-->
+                                        <!--{cn}我从本科就开始学习MATLAB。我擅长使用MATLAB解决最小二乘、数值分析、图像处理及信号处理等问题。-->
+                                    </p>
                                 </div>
                             </div>
 
@@ -824,7 +921,11 @@
 									
                                 </div>
                                 <div class="tab-right">
-                                    <p>OpenGL Shading Language is the tool I always use to realize scene rendering. I have a solid knowledge of both graphical buffers and shader pipelines. Most of my visual realizations are based on Discrete Differentiation and Fluid Dynamics.</p>
+                                    <p>
+                                        OpenGL Shading Language is the tool I always use to realize scene rendering. I have a solid knowledge of both graphical buffers and shader pipelines. Most of my scientific visualization are based on fluid dynamics, graybody, thermodynamics, stress field, and fracture mechanism.
+                                        <!--{en}OpenGL Shading Language is the tool I always use to realize scene rendering. I have a solid knowledge of both graphical buffers and shader pipelines. Most of my scientific visualization are based on fluid dynamics, graybody, thermodynamics, stress field, and fracture mechanism.-->
+                                        <!--{cn}OpenGL着色器是我经常用来实现场景渲染的工具。我有扎实的知识图形缓冲区和着色器管线。我的大多数科学可视实现是基于流体动力学，灰体，热力学，应力场和裂纹机制。-->
+                                    </p>
                                 </div>
                             </div>
 							
@@ -833,7 +934,11 @@
                                     <i class="ion-social-python" style="font-size:5em"></i>
                                 </div>
                                 <div class="tab-right">
-                                    <p>Python is the tool I always use for computer visualization. I am familiar with mature python libraries such as PyTorch, TensorFlow, OpenCV, and NumPy.</p>
+                                    <p>
+                                        Python is the tool I always use for computer vision. I am familiar with mature python libraries such as PyTorch, TensorFlow, OpenCV, and NumPy.
+                                        <!--{en}Python is the tool I always use for computer visualization. I am familiar with mature python libraries such as PyTorch, TensorFlow, OpenCV, and NumPy.-->
+                                        <!--{cn}Python是我经常用于计算机视觉的工具。我熟悉多个python库，如PyTorch，TensorFlow，OpenCV和NumPy。-->
+                                    </p>
                                 </div>
                             </div>
 
@@ -912,10 +1017,17 @@
 	<div class="gradient-overlay"></div>
 	<div class="container">
 		<header class="section-heading" style="margin-bottom: 50px">
-			<h2>Shader Pool</h2>
-			<span>Enjoy samll math application here</span>
-		</header>
+			<h2>Shader Pool<!--{en}Shader Pool--><!--{cn}图形天地--></h2>
+			<span>
+                I'm always fascinated by the visual effects that come from computer graphics
+                <!--{en}I'm always fascinated by the visual effects that come from computer graphics-->
+                <!--{cn}产生于计算机图形学的视觉效果，常常让我着迷不已。-->
+            </span>
+            
+            <!--help-->
 
+    </header>
+      
         <div class="section-content">
             <!--for Webgl-->
             <!--<canvas id="glcanvas" width="700" height="550"></canvas>-->
@@ -936,8 +1048,24 @@
             <script src="assets/js/Three_js/my_script.js"></script>
             
             <!--for three.js -->	
-            
         </div>
+        <p>
+            <label id="demo-basic">HELP<!--{en}HELP--><!--{cn}使用指南--></label>
+        </p> 
+            
+        <script src = "assets/js/jquery.hovercard.min.js"></script>                          
+        <script type="text/javascript">
+        $(document).ready(function () {
+            var hoverHTMLDemoBasic = 'HOLA! Here you can do some basic operations: <br> 1. Mouse Left Button: press + drag == Move your camera. <br> 2. Mouse Middle Button: scrow == Zoom in / zoom out. <br> 3. Control box (left-top on canvas): Change any parameters that you want to implement different effects.';
+            $("#demo-basic").hovercard({
+                detailsHTML: hoverHTMLDemoBasic,
+                width: 500,
+                openOnLeft: false,
+                cardImgSrc: 'assets/js/Three_js/texture/Mark.jpg'
+            });
+        });
+        </script>
+        
 		
 	</div><!-- container -->
 </section>
@@ -946,12 +1074,12 @@
 <!-- Contact-us -->
 <section id="contact" class="section contact">
     <div class="container">
-        <!---->
-        <header class="section-heading">
-            <h2> Feel free to contact me</h2>
-            <span>I'd love to hear from you!</span>
-        </header>
         
+        <header class="section-heading">
+            <h2>Feel free to contact me<!--{en}Feel free to contact me--><!--{cn}请随时和我联系--></h2>
+            <span>I'd love to hear from you!<!--{en}I'd love to hear from you!--><!--{cn}得到您宝贵的建议是我的荣幸！--></span>
+        </header>
+        <!--
         <div class="section-content">
 
             <div class="row">
@@ -978,7 +1106,50 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div>-->
+        <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'assets/php/Exception.php';
+require 'assets/php/PHPMailer.php';
+require 'assets/php/SMTP.php';
+
+$mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+try {
+    //服务器配置
+    $mail->CharSet ="UTF-8";                     //设定邮件编码
+    $mail->SMTPDebug = 0;                        // 调试模式输出
+    $mail->isSMTP();                             // 使用SMTP
+    $mail->Host = 'smtp.163.com';                // SMTP服务器
+    $mail->SMTPAuth = true;                      // 允许 SMTP 认证
+    $mail->Username = '邮箱用户名';                // SMTP 用户名  即邮箱的用户名
+    $mail->Password = '密码或者授权码';             // SMTP 密码  部分邮箱是授权码(例如163邮箱)
+    $mail->SMTPSecure = 'ssl';                    // 允许 TLS 或者ssl协议
+    $mail->Port = 465;                            // 服务器端口 25 或者465 具体要看邮箱服务器支持
+
+    $mail->setFrom('xxxx@163.com', 'Mailer');  //发件人
+    $mail->addAddress('aaaa@126.com', 'Joe');  // 收件人
+    //$mail->addAddress('ellen@example.com');  // 可添加多个收件人
+    $mail->addReplyTo('xxxx@163.com', 'info'); //回复的时候回复给哪个邮箱 建议和发件人一致
+    //$mail->addCC('cc@example.com');                    //抄送
+    //$mail->addBCC('bcc@example.com');                    //密送
+
+    //发送附件
+    // $mail->addAttachment('../xy.zip');         // 添加附件
+    // $mail->addAttachment('../thumb-1.jpg', 'new.jpg');    // 发送附件并且重命名
+
+    //Content
+    $mail->isHTML(true);                                  // 是否以HTML文档格式发送  发送后客户端可直接显示对应HTML内容
+    $mail->Subject = '这里是邮件标题' . time();
+    $mail->Body    = '<h1>这里是邮件内容</h1>' . date('Y-m-d H:i:s');
+    $mail->AltBody = '如果邮件客户端不支持HTML则显示此内容';
+
+    $mail->send();
+    echo '邮件发送成功';
+} catch (Exception $e) {
+    echo '邮件发送失败: ', $mail->ErrorInfo;
+}?>
     </div>
 </section>
 <!-- Contact-us -->
@@ -1018,7 +1189,23 @@
 
 <script src="assets/js/main.js"></script>
 <script src="assets/js/jquery.js"></script>
-    
+
+
+<script type="text/javascript" src="assets/js/translater.min.js"></script>
+
+<!-- tranlate -->
+<script type="text/javascript">
+    tran = new Translater();
+    if (tran.getLang() === "default") 
+    {
+        tran.setLang('en');
+    }
+    var tran = new Translater({
+        lang:"en"
+    });
+    localStorage.setItem("language","en");
+</script>
+   
 <!--WebGl Matrix include-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gl-matrix/2.8.1/gl-matrix-min.js"
 integrity="sha512-zhHQR0/H5SEBL3Wn6yYSaTTZej12z0hVZKOv3TwCUXT1z5qeqGcXJLLrbERYRScEDDpYIJhPC1fk31gqR783iQ=="crossorigin="anonymous" defer>

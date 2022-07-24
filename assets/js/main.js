@@ -2099,11 +2099,8 @@ class TextScramble {
 // Example
 // ——————————————————————————————————————————————————
 
-const phrases = [  //haha here! The dynamic words
-  'Hi there,',
-  'I\'m Tianle',
-  'Glad to see you',
-]
+const phrases0 = document.getElementById('movecontent').textContent.trim()
+var phrases = phrases0.split('-');
 
 const el = document.querySelector('.move-text')
 const fx = new TextScramble(el)
