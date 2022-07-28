@@ -3,6 +3,12 @@ var axes, plane, meshes, material
 var normalMapTexture, textureLoader;
 var controls, stats, gui;
 var nowtime;
+var renderflag = false;
+
+/* Buttons to handle scene switch */
+$("#ifrender").click(function() {
+     renderflag = !renderflag;
+   })
 
 const options = {
      showAxis: false,
@@ -157,7 +163,6 @@ function setGeometrys()
 {
      //---1.Axis-----------------------
      axes = new THREE.AxesHelper(5);
-     scene.add(axes);
 
      //---2.Relative ground-------------
      var planeGeometry = new THREE.PlaneGeometry(10, 10, 1, 1);
@@ -210,6 +215,7 @@ function setGeometrys()
           // Set projection
           mesh.castShadow = true;
      });
+
 }
 
 function initOthers()
@@ -225,9 +231,10 @@ function setControl()
 {
      //orbit for camera movement
      controls = new THREE.OrbitControls(camera,renderer.domElement);
+     controls.enableDamping = true;
      controls.enabled = !options.enableSwoopingCamera;
      controls.addEventListener('change', () => {
-          renderer.render(scene, camera)
+          if(renderflag)renderer.render(scene, camera)
      })
      //object 3Ding
      //effect = new THREE.AnaglyphEffect(renderer);
@@ -237,7 +244,7 @@ function setControl()
 function setGUI()
 {
      gui = new dat.GUI({ autoPlace: false });
-
+     gui.close();
      //erase function:
      //cube.rotation.set(0, 0, 0);
 
@@ -370,7 +377,8 @@ var update=function(deltaTime)
 //Animate (Render)
 var animate=function() {
       //render 3D scene
-     renderer.render( scene, camera );     
+     if(renderflag)
+          renderer.render( scene, camera );     
      //render 3D effect
      //effect.render(scene,camera); 
 }

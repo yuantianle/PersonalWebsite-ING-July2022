@@ -89,6 +89,14 @@
                     </span>
                 </a></li>
 
+                <li><a href="#graphics" itemprop="url">
+                    <span itemprop="name">
+                        Shaderpool
+                        <!--{en}Shaderpool-->
+                        <!--{cn}图形天地-->
+                    </span>
+                </a></li>
+
                 <li><a href="#services" itemprop="url">
                     <span itemprop="name">
                         Skills
@@ -110,14 +118,6 @@
                         Photography
                         <!--{en}Photography-->
                         <!--{cn}摄影集-->
-                    </span>
-                </a></li>
-				
-				<li><a href="#graphics" itemprop="url">
-                    <span itemprop="name">
-                        Shaderpool
-                        <!--{en}Shaderpool-->
-                        <!--{cn}图形天地-->
                     </span>
                 </a></li>
 				
@@ -283,7 +283,7 @@
 
 <!-- /projects --> 
 <section id="projects" class="section projects">
-	<div class="gradient-overlay"></div>
+	<div class="color-overlay"></div>
     <div class="container">
         <header class="section-heading" style="margin-bottom: 50px">
             <h2>Project Collection<!--{en}Project Collection--><!--{cn}项目经历--></h2>
@@ -390,6 +390,65 @@
     </div><!-- container -->
 </section>
 <!-- /projects -->    
+
+<!-- #relax zone-->
+
+<section id="graphics" class="section gallery">
+	<div class="gradient-overlay"></div>
+	<div class="container">
+		<header class="section-heading" style="margin-bottom: 50px">
+			<h2>Shader Pool<!--{en}Shader Pool--><!--{cn}图形天地--></h2>
+			<span>
+                I'm always fascinated by the visual effects that come from computer graphics
+                <!--{en}I'm always fascinated by the visual effects that come from computer graphics-->
+                <!--{cn}产生于计算机图形学的视觉效果，常常让我着迷不已。-->
+            </span>
+            <button id="ifrender">Click Here To Start/Stop Rendering</button>
+            <!--help-->
+
+    </header>
+      
+        <div class="section-content">
+            <!--for Webgl-->
+            <!--<canvas id="glcanvas" width="700" height="550"></canvas>-->
+            <!--for Webgl-->
+           
+            <!--for three.js -->	
+            <div id='statsContainer'></div>
+            <div id="webgl-output"></div>
+            
+            <script src="assets/js/Three_js/libs/build/three.js"></script>
+            <script src='assets/js/Three_js/libs/js/controls/OrbitControls.js'></script>
+            <script src='assets/js/Three_js/libs/js/effects/AnaglyphEffect.js'></script>
+            <script src='assets/js/Three_js/libs/js/libs/stats.min.js'></script>
+            <script src='assets/js/Three_js/libs/dat.gui.js'></script>
+            <script src='assets/js/Three_js/libs/js/loaders/RGBELoader.js'></script>
+            <script src='assets/js/Three_js/libs/js/loaders/GLTFLoader.js'></script>
+            <script src="assets/js/Three_js/my_script.js"></script>
+            
+            <!--for three.js -->	
+        </div>
+        <p>
+            <label id="demo-basic">HELP<!--{en}HELP--><!--{cn}使用指南--></label>
+        </p> 
+            
+        <script src = "assets/js/jquery.hovercard.min.js"></script>                          
+        <script type="text/javascript">
+        $(document).ready(function () {
+            var hoverHTMLDemoBasic = 'HOLA! Here you can do some basic operations: <br> 1. Mouse Left Button: press + drag == Move your camera. <br> 2. Mouse Middle Button: scrow == Zoom in / zoom out. <br> 3. Control box (left-top on canvas): Change any parameters that you want to implement different effects.';
+            $("#demo-basic").hovercard({
+                detailsHTML: hoverHTMLDemoBasic,
+                width: 500,
+                openOnLeft: false,
+                cardImgSrc: 'assets/js/Three_js/texture/Mark.jpg'
+            });
+        });
+        </script>
+        
+		
+	</div><!-- container -->
+</section>
+<!-- #relax zone-->
 
 
 <!-- Service -->
@@ -1023,65 +1082,6 @@
 </section>
 <!-- /Expertise -->
 
-<!-- #relax zone-->
-
-<section id="graphics" class="section gallery">
-	<div class="gradient-overlay"></div>
-	<div class="container">
-		<header class="section-heading" style="margin-bottom: 50px">
-			<h2>Shader Pool<!--{en}Shader Pool--><!--{cn}图形天地--></h2>
-			<span>
-                I'm always fascinated by the visual effects that come from computer graphics
-                <!--{en}I'm always fascinated by the visual effects that come from computer graphics-->
-                <!--{cn}产生于计算机图形学的视觉效果，常常让我着迷不已。-->
-            </span>
-            
-            <!--help-->
-
-    </header>
-      
-        <div class="section-content">
-            <!--for Webgl-->
-            <!--<canvas id="glcanvas" width="700" height="550"></canvas>-->
-            <!--for Webgl-->
-           
-            <!--for three.js -->	
-            <div id='statsContainer'></div>
-        	
-            <div id="webgl-output"></div>
-            
-            <script src="assets/js/Three_js/libs/build/three.js"></script>
-            <script src='assets/js/Three_js/libs/js/controls/OrbitControls.js'></script>
-            <script src='assets/js/Three_js/libs/js/effects/AnaglyphEffect.js'></script>
-            <script src='assets/js/Three_js/libs/js/libs/stats.min.js'></script>
-            <script src='assets/js/Three_js/libs/dat.gui.js'></script>
-            <script src='assets/js/Three_js/libs/js/loaders/RGBELoader.js'></script>
-            <script src='assets/js/Three_js/libs/js/loaders/GLTFLoader.js'></script>
-            <script src="assets/js/Three_js/my_script.js"></script>
-            
-            <!--for three.js -->	
-        </div>
-        <p>
-            <label id="demo-basic">HELP<!--{en}HELP--><!--{cn}使用指南--></label>
-        </p> 
-            
-        <script src = "assets/js/jquery.hovercard.min.js"></script>                          
-        <script type="text/javascript">
-        $(document).ready(function () {
-            var hoverHTMLDemoBasic = 'HOLA! Here you can do some basic operations: <br> 1. Mouse Left Button: press + drag == Move your camera. <br> 2. Mouse Middle Button: scrow == Zoom in / zoom out. <br> 3. Control box (left-top on canvas): Change any parameters that you want to implement different effects.';
-            $("#demo-basic").hovercard({
-                detailsHTML: hoverHTMLDemoBasic,
-                width: 500,
-                openOnLeft: false,
-                cardImgSrc: 'assets/js/Three_js/texture/Mark.jpg'
-            });
-        });
-        </script>
-        
-		
-	</div><!-- container -->
-</section>
-<!-- #relax zone-->
 
 <!-- Contact-us -->
 <section id="contact" class="section contact">
