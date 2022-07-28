@@ -28,7 +28,19 @@
 
 <body data-spy="scroll" data-target="#main-nav-collapse" data-offset="100">
 
-		
+<div class= "mycursor"></div>
+<script>
+    const cursor = document.querySelector('.mycursor');
+    document.addEventListener('mousemove', e =>{
+        cursor.setAttribute("style","top: "+(e.pageY-15)+"px; left: "+(e.pageX-15)+"px;")
+    document.addEventListener('click',()=>{
+        cursor.classList.add("expand");
+        setTimeout(()=>{
+            cursor.classList.remove("expand");
+        }, 500)
+    })
+    })
+</script>
 
 <div class="page-loader">
     <div class="loader">Loading...</div>
@@ -578,7 +590,7 @@
                        data-largesrc="assets/images/portfolio/Way.jpg"
                        data-title="Nevada Highway"
                        data-description="--mm, ƒ/--, 1/--s, ISO ---"
-                       style="background-image:url(assets/images/portfolio/thumbs/Yellow.jpg)">
+                       style="background-image:url(assets/images/portfolio/thumbs/Way.jpg)">
                     </a>
                 </li>
 				
@@ -1079,7 +1091,7 @@
             <h2>Feel free to contact me<!--{en}Feel free to contact me--><!--{cn}请随时和我联系--></h2>
             <span>I'd love to hear from you!<!--{en}I'd love to hear from you!--><!--{cn}得到您宝贵的建议是我的荣幸！--></span>
         </header>
-        <!--
+        <!---->
         <div class="section-content">
 
             <div class="row">
@@ -1106,8 +1118,8 @@
                     </form>
                 </div>
             </div>
-        </div>-->
-        <?php
+        </div>
+        <!--<?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -1150,7 +1162,7 @@ try {
 } catch (Exception $e) {
     echo '邮件发送失败: ', $mail->ErrorInfo;
 }?>
-    </div>
+    </div>-->
 </section>
 <!-- Contact-us -->
 

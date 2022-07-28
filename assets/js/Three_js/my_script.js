@@ -161,7 +161,7 @@ function setGeometrys()
 
      //---2.Relative ground-------------
      var planeGeometry = new THREE.PlaneGeometry(10, 10, 1, 1);
-     const planeTexture = textureLoader.load("assets/js/Three_js/texture/mark.jpg");
+     const planeTexture = textureLoader.load("assets/js/Three_js/texture/Mark.jpg");
      const planeMaterial = new THREE.MeshPhongMaterial({ map: planeTexture, color: 0xffffff, shininess:40});
      plane = new THREE.Mesh(planeGeometry, planeMaterial);
      

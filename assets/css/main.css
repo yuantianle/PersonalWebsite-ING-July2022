@@ -3,7 +3,76 @@ html, body {
   overflow-x: hidden; 
 
   }
+
+/*-----------------------------------------
+    Cursor Effects
+------------------------------------------*/
+body{
+  /*cursor: none;*/
+}
+.mycursor
+{
+   width: 30px;
+   height: 30px;
+   border: 2px solid rgb(255, 188, 4);
+   border-radius: 50%;
+   transform: translate(-50%, -50%);
+   position: absolute;
+   transition-duration: 300ms;
+   transition-timing-function: ease-out;
+   animation: cursorAnim .5s infinite alternate;
+   z-index: 1000000;
+   pointer-events: none;
+}
+.mycursor::after
+{
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: .5;
+  top: -7px;
+  left: -7px;
+  animation: cursorAnim1 .5s infinite alternate;
+}
+@keyframes cursorAnim {
+    from{
+      transform: scale(1);
+    }
+    to{
+      transform: scale(.7);
+    }
   
+}
+@keyframes cursorAnim1 {
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(.4);
+  }
+
+}
+
+.expand{
+  animation: cursorAnim2 .5s forwards;
+  border: 1px solid rgb(25, 0, 255);
+}
+@keyframes cursorAnim2 {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(3);
+  }
+  100%{
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
 /*-----------------------------------------
     Some web face looking filter
 ------------------------------------------*/
