@@ -4,6 +4,7 @@ var normalMapTexture, textureLoader;
 var controls, stats, gui;
 var nowtime;
 var renderflag = false;
+var atmosphere, points, pointsGeometry;
 
 /* Buttons to handle scene switch */
 $("#ifrender").click(function() {
@@ -216,6 +217,66 @@ function setGeometrys()
           mesh.castShadow = true;
      });
 
+     var temp = new THREE.BoxBufferGeometry( 0.75, 0.75, 1.5 );
+     var point = new THREE.Mesh(temp,{ color: 0xf00000});
+	pointsGeometry = new THREE.BufferGeometry();
+     point.updateMatrix();
+     pointsGeometry.merge(point.geometry, point.matrix);
+     points = new THREE.Mesh( pointsGeometry, new THREE.MeshBasicMaterial( { color: 0xfff000} ) );
+     points.castShadow = true;
+	scene.add( points );
+     //plotData(); 
+}
+
+function plotData() {
+
+	var lat, lng, size, color;
+     
+	for ( var i = 0, l = data.length; i < l; i ++ ) {
+
+		lat = data[ i ][ 1 ];
+		lng = data[ i ][ 2 ];
+		size = data[ i ][ 0 ];
+		color = new THREE.Color();
+		//color.setHSL( ( 0.6 - ( size * 1.6 ) ), 1.0, 1.0 );//column color
+          color.setRGB(1,0,0);
+		addPoint( lat, lng, size * 150, color  );//column size
+	}
+
+     points = new THREE.Mesh( pointsGeometry, new THREE.MeshBasicMaterial( { color: 0xfff000} ) );
+     points.castShadow = true;
+	scene.add( points );
+}
+
+function addPoint( lat, lng, size, color ) {
+
+     var temp = new THREE.BoxBufferGeometry( 0.75, 0.75, 1.5 );
+     var point = new THREE.Mesh(temp);
+	// if ( lat == 0 && lng == 0 ) return;
+
+	var phi = ( 90 - lat ) * Math.PI / 180;
+	var theta = ( 180 - lng ) * Math.PI / 180;
+
+	// position
+
+	point.position.x = 1 * Math.sin( phi ) * Math.cos( theta );
+	point.position.y = 1 * Math.cos( phi );
+	point.position.z = 1 * Math.sin( phi ) * Math.sin( theta );
+
+	// rotation
+
+	point.lookAt( meshes[0].position );
+
+	// scaling
+
+	//point.scale.z = size;
+	point.updateMatrix();
+
+	// color
+     point.geometry.FaceColors = color 
+
+     point.updateMatrix();
+     pointsGeometry.merge(point.geometry, point.matrix);
 }
 
 function initOthers()
@@ -396,5 +457,7 @@ var loop=function() {
      animate();
      stats.update();
 }
+
+
 
 window.onload = init
