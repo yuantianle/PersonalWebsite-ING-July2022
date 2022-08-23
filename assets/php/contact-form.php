@@ -7,6 +7,51 @@
 //Import PHPMailer class into the global namespace
 use PHPMailer\PHPMailer\PHPMailer;
 
+
+
+
+///* PHP中用strpos函数过滤关键字 */
+//// 关键字过滤函数
+//function keyWordCheck($content){
+//	// 去除空白
+//	$content = trim($content);
+//	// 读取关键字文本
+//	$content = @file_get_contents('keyWords.txt');
+//	// 转换成数组
+//	$arr = explode("n", $content);
+//	// 遍历检测
+//	for($i=0,$k=count($arr);$i<$k;$i++){
+//		// 如果此数组元素为空则跳过此次循环
+//		if($arr[$i]==''){
+//		continue;
+//		}
+//		// 如果检测到关键字，则返回匹配的关键字,并终止运行
+//		if(@strpos($str,trim($arr[$i]))!==false){
+//		//$i=$k;
+//		return $arr[$i];
+//		}
+//	}
+//	// 如果没有检测到关键字则返回false
+//	return false;
+//}
+////$content = '这里是要发布的文本内容。。。';
+//
+//// 过滤关键字
+//$keyWord1 = keyWordCheck($mail->to);
+//$keyWord2 = keyWordCheck($mail->message);
+//// 判断是否存在关键字
+//if($keyWord1||$keyWord2){
+//	echo 'Your message exist unapropriate content. You have been forbidden for this moduel.'.$keyWord;
+//}
+//else{
+//	echo 'Leagal message content.';
+//	// 往下可以进行写库操作完成发布动作。
+//}
+		
+
+
+
+
 //Don't run this unless we're handling a form submission
 if (array_key_exists('email', $_POST)) {
     date_default_timezone_set('Etc/UTC');
@@ -46,6 +91,8 @@ Name: {$_POST['name']}
 Message: {$_POST['message']}
 EOT;
 
+
+		
         //Send the message, check for errors
         if (!$mail->send()) {
             //The reason for failing to send will be in $mail->ErrorInfo
@@ -56,7 +103,7 @@ EOT;
 
 	    $response = 'Sorry, something went wrong. Please try again later.';
         } else {
-	    $response = 'The email was delivered successfully! Thanks for contacting me. I\'ll get back to you ASAP :)';
+	    $response = 'Email was delivered successfully! Thanks for contacting me. I\'ll get back to you ASAP :)';
         }
     } else {
 	$response = 'Invalid email address, message ignored.';
