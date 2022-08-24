@@ -4,6 +4,37 @@ html, body {
 
   }
 
+#ifrender {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+  background-color: rgb(178, 188, 198);
+  color: rgb(0, 0, 0);
+}
+
+#ifrender:hover {
+  box-shadow: 0 12px 17px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: rgb(178, 188, 198);
+  background-color: #4CAF50; 
+  color: rgb(0, 0, 0);
+}
+
+/*-----------------------------------------
+    Earth Collect Effects
+------------------------------------------*/
+.collect {
+  overflow: none;  
+  background-color: #000;
+}
+
+.earth_collect {
+  position: relative;
+  margin:0 auto;
+
+  overflow: auto;
+  overscroll-behavior: contain;
+  height:347px;
+  width: 341px;
+  background-color: rgb(0, 0, 0);
+}
 /*-----------------------------------------
     Cursor Effects
 ------------------------------------------*/
@@ -117,7 +148,7 @@ video {
 #guiContainer
 {
   position: absolute;
-  top: 18.6%;  
+  top: 21.2%;  
   left: 4%;   
   /*border: solid 2px rgb(128, 0, 0);*/ 
 }
@@ -2404,7 +2435,7 @@ blockquote p {
 .footer {
   background-color: #000;
   color: #FDFDFD;
-  padding: 32px 0; 
+  padding: 5px 0 20px; 
   text-align: center;}
   @media only screen and (max-width: 767px) {
     .footer {
