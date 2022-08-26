@@ -4,6 +4,223 @@ html, body {
 
   }
 
+/*For Debug Boundary 
+*{
+    outline: solid #f00 1px !important;
+    background: #000 !important;
+    color: #fff !important;
+}
+*/
+
+/*-----------------------------------------
+  Video arrangement
+------------------------------------------*/
+#video1{
+  width: 545px;
+  height: 315px; 
+  position: relative;
+  left: 1%;
+}
+
+#video2{
+  width: 545px;
+  height: 315px; 
+  position: relative;
+  left: 3%;
+}
+
+@media (min-width: 375px) {
+  #video1{
+    width: 345px;
+    height: 215px; 
+    position: relative;
+    left: 0%;
+  }
+  
+  #video2{
+    width: 345px;
+    height: 215px; 
+    position: relative;
+    left: 0%;
+  }
+}
+@media (min-width: 375px)  and (orientation: landscape){
+  #video1{
+    width: 639px;
+    height: 315px; 
+    position: relative;
+    left: 0%;
+  }
+  
+  #video2{
+    width: 639px;
+    height: 315px; 
+    position: relative;
+    left: 0%;
+  }
+}
+@media (min-width: 768px) {
+  #video1{
+    width: 345px;
+    height: 315px; 
+    position: relative;
+    left: 1%;
+  }
+  
+  #video2{
+    width: 345px;
+    height: 315px; 
+    position: relative;
+    left: 3%;
+  }
+}
+@media (min-width: 768px)  and (orientation: landscape){
+  #video1{
+    width: 449px;
+    height: 315px; 
+    position: relative;
+    left: 1%;
+  }
+  
+  #video2{
+    width: 449px;
+    height: 315px; 
+    position: relative;
+    left: 3%;
+  }
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+  #video1{
+    width: 545px;
+    height: 315px; 
+    position: relative;
+    left: 1%;
+  }
+  
+  #video2{
+    width: 545px;
+    height: 315px; 
+    position: relative;
+    left: 3%;
+  }
+}
+
+/*-----------------------------------------
+  Language transfering buttons
+------------------------------------------*/
+
+.languagechoose1{
+  margin-left:88.5%;
+  margin-right:13px;
+  font-weight: 300;
+  padding:3.5px;
+  color:#1382e9;
+  font-family:Georgia;
+  font-size: 17px;
+  text-decoration:none
+}
+ /* 鼠标移动到链接上 */
+.languagechoose1:hover {
+  color:#000000;
+  font-weight: 500;
+  padding:3.5px;
+  background-color: #B2BCC6;
+  text-decoration:none
+}  
+ /* 鼠标点击时 */
+.languagechoose1:active {
+  color:#04048a;
+}
+
+.languagechoose2{
+  margin-left:6px;
+  font-weight: 400;
+  padding:3.5px;
+  color:#d43f3a;
+  font-family:Georgia;
+  font-size:16px;
+  text-decoration:none
+}
+
+@media (min-width: 375px) {
+  .languagechoose1{
+    margin-left:63.5%;
+    margin-right:6px;
+    font-weight: 300;
+    padding:3.5px;
+    color:#1382e9;
+    font-family:Georgia;
+    font-size: 17px;
+    text-decoration:none
+  }
+}
+@media (min-width: 375px)  and (orientation: landscape){
+  .languagechoose1{
+    margin-left:79.5%;
+    margin-right:6px;
+    font-weight: 300;
+    padding:3.5px;
+    color:#1382e9;
+    font-family:Georgia;
+    font-size: 17px;
+    text-decoration:none
+  }
+}
+@media (min-width: 768px) {
+  .languagechoose1{
+    margin-left:81.5%;
+    margin-right:6px;
+    font-weight: 300;
+    padding:3.5px;
+    color:#1382e9;
+    font-family:Georgia;
+    font-size: 17px;
+    text-decoration:none
+  }
+}
+@media (min-width: 768px)  and (orientation: landscape){
+  .languagechoose1{
+    margin-left:86.5%;
+    margin-right:6px;
+    font-weight: 300;
+    padding:3.5px;
+    color:#1382e9;
+    font-family:Georgia;
+    font-size: 17px;
+    text-decoration:none
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+  .languagechoose1{
+    margin-left:88.5%;
+    margin-right:13px;
+    font-weight: 300;
+    padding:3.5px;
+    color:#1382e9;
+    font-family:Georgia;
+    font-size: 17px;
+    text-decoration:none
+  }
+}
+
+ /* 鼠标移动到链接上 */
+ .languagechoose2:hover {
+  color:#000000;
+  font-weight: 500;
+  padding:3.5px;
+  background-color: #B2BCC6;
+  text-decoration:none
+}  
+ /* 鼠标点击时 */
+.languagechoose2:active {
+  color:#810303;
+}
+
+
+/*-----------------------------------------
+    Render button
+------------------------------------------*/
 #ifrender {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
   background-color: rgb(178, 188, 198);
@@ -18,11 +235,47 @@ html, body {
 }
 
 /*-----------------------------------------
+    Scroll bar for gallery part
+------------------------------------------*/
+  .test-1::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width : 2px;  /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+    overflow:auto;
+    overflow:initial;
+  }
+  .test-1::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius: 10px;
+    box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background   : rgba(0, 0, 0, 0);
+  }
+  .test-1::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background   : rgba(0, 0, 0, 0);
+  }
+
+  /*滚动条不在区域的时候隐藏*/
+  .test-1:hover::-webkit-scrollbar-thumb {
+    background-color: #acfff1;
+    border-radius: 2px;
+    opacity: 0;
+  }
+  .test-1:hover::-webkit-scrollbar-track {
+    box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background   : #000000;
+    }
+  
+
+/*-----------------------------------------
     Earth Collect Effects
 ------------------------------------------*/
 .collect {
   overflow: none;  
-  background-color: #000;
+  background-color: #000000;
 }
 
 .earth_collect {
@@ -33,7 +286,7 @@ html, body {
   overscroll-behavior: contain;
   height:347px;
   width: 341px;
-  background-color: rgb(0, 0, 0);
+  background-color: #000000;
 }
 /*-----------------------------------------
     Cursor Effects
@@ -152,21 +405,24 @@ video {
   left: 4%;   
   /*border: solid 2px rgb(128, 0, 0);*/ 
 }
+@media only screen and (max-width: 767px) {
+  #guiContainer {
+    position: absolute;
+    top: 22.8%;  
+    left: 4%;  
+   } }
+
 #demo-basic
 {
   font-size: x-large;
-  border-top: 3px solid rgb(0, 0, 0);
-  border-right: 3px solid rgb(0, 0, 0);
-  border-bottom: 3px solid rgb(0, 0, 0);
-  border-left: 3px solid rgb(0, 0, 0);
+  border-top: 3px solid rgb(53, 14, 14);
+  border-right: 3px solid rgb(53, 14, 14);
+  border-bottom: 3px solid rgb(53, 14, 14);
+  border-left: 3px solid rgb(53, 14, 14);
     position: relative;
-    top: 10%;
-    left: 47%; 
+    margin-top: 1%;
+    margin-left: 47%; 
     color: #0800ff;
-}
-#demo-basic.hovercard
-{
-    background: #000000;
 }
 
 span.text-to-hide
@@ -177,6 +433,12 @@ span.text-to-hide
 /*-----------------------------------------
     BGM player style
 ------------------------------------------*/
+audio{
+  margin-top: 3%;
+  margin-left: 3%;
+  height: 40px;
+  width: 250px;
+}
 
 audio::-webkit-media-controls-panel {
   background-color: #8291A1;
@@ -210,8 +472,159 @@ audio::-webkit-media-controls-time-remaining-display {
 audio::-webkit-media-controls-volume-slider {
   background-color: #BBC5D0;
   border-radius: 25px;
-  padding-left: 8px;
+  padding-left: 0px;
   padding-right: 8px;
+}
+
+@media (min-width: 375px) {
+  audio{
+    margin-top: 2%;
+    margin-left: 2%;
+    height: 40px;
+    width: 250px;
+  }
+
+  audio::-webkit-media-controls-panel {
+    background-color: #4e6a7a;
+  }
+  
+  audio::-webkit-media-controls-play-button {
+    background-color: #B1D4E0;
+    border-radius: 57%;
+    size: 20px;
+  }
+  
+  audio::-webkit-media-controls-play-button:hover {
+    background-color: #BBC5D0;
+  }
+  
+  audio::-webkit-media-controls-current-time-display {
+    color: #000000;
+    font-weight: bold;
+    font-size: 13px;
+    text-indent: 5px;
+    text-shadow: none;
+    text-decoration: none;
+  }
+  
+  audio::-webkit-media-controls-time-remaining-display {
+    color: #000000;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: none;
+    text-decoration: none;
+  }
+  
+  audio::-webkit-media-controls-volume-slider {
+    background-color: #BBC5D0;
+    border-radius: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  audio::-webkit-media-controls-volume-slider:hover {
+    background-color: #e70000;
+    border-radius: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+
+@media (min-width: 768px) {
+  audio{
+    margin-top: 2%;
+    margin-left: 0%;
+    height: 40px;
+    width: 250px;
+  }
+
+  audio::-webkit-media-controls-panel {
+    background-color: #4e6a7a;
+  }
+  
+  audio::-webkit-media-controls-play-button {
+    background-color: #B1D4E0;
+    border-radius: 57%;
+    size: 20px;
+  }
+  
+  audio::-webkit-media-controls-play-button:hover {
+    background-color: #BBC5D0;
+  }
+  
+  audio::-webkit-media-controls-current-time-display {
+    color: #000000;
+    font-weight: bold;
+    font-size: 13px;
+    text-indent: 5px;
+    text-shadow: none;
+    text-decoration: none;
+  }
+  
+  audio::-webkit-media-controls-time-remaining-display {
+    color: #000000;
+    font-weight: bold;
+    font-size: 13px;
+    text-shadow: none;
+    text-decoration: none;
+  }
+  
+  audio::-webkit-media-controls-volume-slider {
+    background-color: #BBC5D0;
+    border-radius: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  audio::-webkit-media-controls-volume-slider:hover {
+    background-color: #e70000;
+    border-radius: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+  audio{
+    margin-top: 3%;
+    margin-left: 3%;
+    height: 40px;
+    width: 250px;
+  }
+  
+  audio::-webkit-media-controls-panel {
+    background-color: #8291A1;
+  }
+  
+  audio::-webkit-media-controls-play-button {
+    background-color: #B1D4E0;
+    border-radius: 37%;
+    
+  }
+  
+  audio::-webkit-media-controls-play-button:hover {
+    background-color: #BBC5D0;
+  }
+  
+  audio::-webkit-media-controls-current-time-display {
+    color: #000000;
+    font-weight: bold;
+    text-indent: 10px;
+    text-shadow: none;
+    text-decoration: none;
+  }
+  
+  audio::-webkit-media-controls-time-remaining-display {
+    color: #000000;
+    font-weight: bold;
+    text-shadow: none;
+    text-decoration: none;
+  }
+  
+  audio::-webkit-media-controls-volume-slider {
+    background-color: #BBC5D0;
+    border-radius: 25px;
+    padding-left: 0px;
+    padding-right: 8px;
+  }
 }
 
 /*
@@ -274,7 +687,7 @@ audio::-webkit-media-controls-volume-slider {
 
 /* overlay and pattern */
 .overlay, .color-overlay, .gradient-overlay {
-  min-width: 100vw;
+  min-width: 93vw;
   position: absolute;
   top: 0;
   left: 0;
@@ -672,6 +1085,7 @@ blockquote p {
 /* Global Styles   */
 /*-----------------*/
 .btn {
+  margin: 20px 0;
   border-radius: 2px;
   font-size: 12px;
   padding: 10px 35px;
@@ -2299,7 +2713,7 @@ blockquote p {
   position: relative; }
 .gallery .og-grid {
   list-style: none;
-  padding: 20px 0;
+  padding: 0px 0;
   margin: 0 auto;
   text-align: center;
   width: 100%; }
@@ -2349,12 +2763,13 @@ blockquote p {
   left: 0;
   width: 100%;
   margin-top: 15px;
-  text-align: left;
+  text-align: start;
   height: 0;
   overflow: hidden; }
 .gallery .og-expander-inner {
-  padding: 50px 30px;
-  height: 100%; }
+  padding: 50px 50px;
+  height: 100%; 
+  }
 .gallery .og-close {
   position: absolute;
   width: 40px;
@@ -2377,7 +2792,7 @@ blockquote p {
     max-height: 100%;
     max-width: 100%; }
 .gallery .og-details {
-  padding: 0 40px 0 20px; }
+  padding: 0px 40px 0 40px; }
   .gallery .og-details h3 {
     font-weight: 300;
     font-size: 52px;
@@ -2535,6 +2950,9 @@ blockquote p {
     .footer-widgets .content-wrap {
       padding-left: 25px; } }
 
+/*-----------------------------------------
+  Tiltle moving words
+------------------------------------------*/      
 
 .move-text {  
   font-family: 'Helvetica';
@@ -2542,10 +2960,21 @@ blockquote p {
   font-size: 80px;
   color: #FFFFFF;}
 .move-dud {
-	
   font-weight: 1;
   font-size: 60px;
   color: #002fa7;
+}
+@media only screen and (max-width: 767px) {
+  .move-text {  
+    font-family: 'Helvetica';
+    font-weight: 90;
+    font-size: 45px;
+    color: #FFFFFF;}
+  .move-dud {
+    font-weight: 1;
+    font-size: 30px;
+    color: #002fa7;
+  }
 }
 
 

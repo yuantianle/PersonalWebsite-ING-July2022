@@ -61,7 +61,7 @@ function init()
      setKeyEvents(); 
      refreshWindown();    
     
-     setStatusMontor();
+     //setStatusMontor();
 
      loop();
 }
@@ -105,7 +105,7 @@ function initRenender()
 function refreshWindown(){
      //add event monitor, adapt the window
      window.addEventListener('resize', function(){
-         var width = window.innerWidth*0.82;
+         var width = window.innerWidth*0.83;
          var height = window.innerHeight*0.8;
          renderer.setSize(width,height);
          camera.aspect = width/height;
@@ -115,7 +115,7 @@ function refreshWindown(){
 }
 
 function setWindown(){
-     var width = window.innerWidth*0.82;
+     var width = window.innerWidth*0.83;
      var height = window.innerHeight*0.77;
      renderer.setSize(width,height);
      camera.aspect = width/height;
@@ -396,7 +396,7 @@ function setStatusMontor()
 {
      stats = new Stats();
      stats.setMode( 0 );
-     stats.domElement.style.position = 'absolute';
+     stats.domElement.style.position = 'relative';
      stats.domElement.style.left = '0px';
      stats.domElement.style.top = '0px';
      document.getElementById('statsContainer').appendChild(stats.domElement);
@@ -455,7 +455,7 @@ var loop=function() {
      controls.update();
      update(t);
      animate();
-     stats.update();
+     //stats.update();
 }
 
 

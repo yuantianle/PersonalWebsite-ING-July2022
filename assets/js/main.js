@@ -8,7 +8,7 @@ canvas.height = canvas.width * heightRatio;*/
 /*------------------------------------------
  Contact form
  ------------------------------------------*/
-
+  
 $(document).ready(function () {
 	
 	/*added for the collapse of the pictures [finished debug] */ 
