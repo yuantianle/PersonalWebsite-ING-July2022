@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+
+.bounce-words {
+  font-family: "Luckiest Guy", cursive;
+}
+
+.bounce-words h2 {
+  text-align: center;
+  text-indent : 20px;
+}
+.bounce-words h2 span {
+  position: relative;
+  top: 20px;
+  font-size: 70px;
+  color: #fff;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+    0 5px 0 #ccc, 0 6px 0 transparent, 0 7px 0 transparent, 0 8px 0 transparent,
+    0 9px 0 transparent, 0 10px 10px rgba(0, 0, 0, 0.4);
+  animation: bounce 0.3s infinite alternate;
+}
+@keyframes bounce {
+  100% {
+    top: -20px;
+    text-shadow: 0 1px 0 #ccc, 0 2px 0 #ccc, 0 3px 0 #ccc, 0 4px 0 #ccc,
+      0 5px 0 #ccc, 0 6px 0 #ccc, 0 7px 0 #ccc, 0 8px 0 #ccc, 0 9px 0 #ccc,
+      0 50px 25px rgba(0, 0, 0, 0.2);
+  }
+}
+.bounce-words h2 span:nth-child(2) {
+  animation-delay: 0.1s;
+}
+.bounce-words h2 span:nth-child(3) {
+  animation-delay: 0.2s;
+}
+.bounce-words h2 span:nth-child(4) {
+  animation-delay: 0.3s;
+}
+.bounce-words h2 span:nth-child(5) {
+  animation-delay: 0.4s;
+}
+.bounce-words h2 span:nth-child(6) {
+  animation-delay: 0.5s;
+}
+.bounce-words h2 span:nth-child(7) {
+  animation-delay: 0.6s;
+}
+.bounce-words h2 span:nth-child(8) {
+  animation-delay: 0.7s;
+}
+.bounce-words h2 span:nth-child(9) {
+  animation-delay: 0.8s;
+}
+
+@media (min-width: 375px) {
+    .bounce-words h2 span {
+        position: relative;
+        top: 20px;
+        font-size: 55px;
+    }
+  }
+  @media (min-width: 375px)  and (orientation: landscape){
+    .bounce-words h2 span {
+        position: relative;
+        top: 20px;
+        font-size: 70px;
+    }
+  }
+  @media (min-width: 768px) {
+    .bounce-words h2 span {
+        position: relative;
+        top: 20px;
+        font-size: 70px;
+    }
+  }
+  @media (min-width: 768px)  and (orientation: landscape){
+    .bounce-words h2 span {
+        position: relative;
+        top: 20px;
+        font-size: 70px;
+    }
+  }
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+    .bounce-words h2 span {
+        position: relative;
+        top: 20px;
+        font-size: 70px;
+    }
+  }

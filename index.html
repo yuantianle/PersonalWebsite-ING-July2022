@@ -25,7 +25,8 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
     />
-    
+    <link rel="stylesheet" href="assets/css/bounce.css"/>
+
     <script src="assets/lib/components-modernizr/modernizr.js"></script>  <!-- for java script citation-->
      <!--<script src="assets/lib/jquery/dist/jquery.js"></script>-->
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
@@ -37,6 +38,7 @@
 
 <body data-spy="scroll" data-target="#main-nav-collapse" data-offset="100" >
 
+    
 <div class= "mycursor"></div>
 <script>
     const cursor = document.querySelector('.mycursor');
@@ -706,11 +708,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <script type="text/javascript">
 Fancybox.bind('[data-fancybox="gallery1"]', {
-  caption: function (fancybox, carousel, slide) {
-    return (
-      `${slide.index + 1} / ${carousel.slides.length} <br />` + slide.caption
-    );
-  }, 
 
    Image: {
     Panzoom: {
@@ -719,7 +716,8 @@ Fancybox.bind('[data-fancybox="gallery1"]', {
         return 5;
       },
     },
-    fit: cover,
+
+
   },
 
   Toolbar: {
@@ -732,7 +730,28 @@ Fancybox.bind('[data-fancybox="gallery1"]', {
       "close",
     ],
   },
+
+  Thumbs: {
+    Carousel: {
+      fill: false,
+      center: true,
+    },
+  },
+
+  Protect: true,
+
+  //make loaded image more clear
+  AfterLoad : function(instance, current) {
+        var pixelRatio = window.devicePixelRatio || 1;
+
+        if ( pixelRatio > 1.5 ) {
+            current.width  = current.width  / pixelRatio;
+            current.height = current.height / pixelRatio;
+        }
+    },
+
 });
+
 </script>
 
 <!-- /Photo -->
@@ -751,22 +770,65 @@ Fancybox.bind('[data-fancybox="gallery1"]', {
 
 
 		<!--video!!!-->
-        <iframe src="//player.bilibili.com/player.html?aid=687483410&bvid=BV1XU4y1675u&cid=814575962&page=1" frameborder="2" scrolling="yes" id="video1"></iframe>
+        <iframe src="//player.bilibili.com/player.html?aid=687483410&bvid=BV1XU4y1675u&cid=814575962&page=1" frameborder="0" scrolling="yes" id="video1"></iframe>
 
-        <iframe src="//player.bilibili.com/player.html?aid=217478865&bvid=BV1Ua411G7zw&cid=814587837&page=1" frameborder="2" scrolling="yes" id="video2"></iframe></p>
+        <iframe src="//player.bilibili.com/player.html?aid=217478865&bvid=BV1Ua411G7zw&cid=814587837&page=1" frameborder="0" scrolling="yes" id="video2"></iframe></p>
         
-        <div class="photo-container test-1" style="height:500px;overflow-y:auto;overflow-x:hidden">
+        <div class="photo-container test-1" style="height:600px;overflow-y:auto;overflow-x:hidden">
      
-                <div class="photo-size-manager og-grid og-grid-4col-yuant mb-3">
+                <div class="photo-size-manager og-grid og-grid-4col-yuant mb-3 ">
                     <!--first is the big, second is the small-->
+                    <li>
+                        <a href="https://i.ibb.co/q9DMtkD/IMG-6027.jpg"
+                        class="photo-item fancybox"
+                        data-fancybox="gallery1"        
+                        data-width="1900"
+                        data-caption="
+                        <br /><br />
+                        <h2 class='Big_style'>Hello, There!</h2>
+                        <br /><br />
+                        <p class='Small_style'>This is a multi-line caption</p>"
+                        >
+                        <img src="https://i.ibb.co/q9DMtkD/IMG-6027.jpg" width="100%" height="100%" alt="" />
+                        </a>
+                    </li>
+
                     <li>
                         <a href="https://i.ibb.co/VgfMPbJ/IMG-6873.jpg"
                         class="photo-item fancybox"
-                        data-fancybox="gallery1"        
-                        data-fancybox-title="This is title No. 1"
-                        data-caption="This is the caption"
-                    >
-                        <img src="https://i.ibb.co/Tc97X1S/IMG-6873.jpg" width="100%" height="100%" alt="" />
+                        data-fancybox="gallery1"
+                        data-width="1900"
+                        data-caption="
+                        <br /><br />
+                        <h2 class='Big_style'>Hello, There!</h2>
+                        <br /><br />
+                        <p class='Small_style'>This is a multi-line caption</p>"
+                        >
+                        <img src="https://i.ibb.co/Tc97X1S/IMG-6873.jpg" width="100%" height="100%">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://i.ibb.co/VgfMPbJ/IMG-6873.jpg"
+                        class="photo-item fancybox"
+                        data-fancybox="gallery1">
+                        <img src="https://i.ibb.co/Tc97X1S/IMG-6873.jpg" width="100%" height="100%">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://i.ibb.co/VgfMPbJ/IMG-6873.jpg"
+                        class="photo-item fancybox"
+                        data-fancybox="gallery1">
+                        <img src="https://i.ibb.co/Tc97X1S/IMG-6873.jpg" width="100%" height="100%">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://i.ibb.co/VgfMPbJ/IMG-6873.jpg"
+                        class="photo-item fancybox"
+                        data-fancybox="gallery1">
+                        <img src="https://i.ibb.co/Tc97X1S/IMG-6873.jpg" width="100%" height="100%">
                         </a>
                     </li>
 
@@ -1534,6 +1596,11 @@ Fancybox.bind('[data-fancybox="gallery1"]', {
                 <!--{en}A bit of background on my skills-->
                 <!--{cn}我对于日常使用的工具的熟练度进行的评分。-->
             </span>
+            <div>
+                <a href="https://github.com/yuantianle" target="_blank">
+                    <img id="exp_git" src="assets/images/intro/github.png" />
+                </a>
+            </div>
         </header>
 
         <div class="section-content">
@@ -1681,7 +1748,21 @@ Fancybox.bind('[data-fancybox="gallery1"]', {
     <div class="container">
         
         <header class="section-heading">
-            <h2>Feel free to contact me<!--{en}Feel free to contact me--><!--{cn}请随时和我联系--></h2>
+            <div class="bounce-words">
+                <h2>
+                    <span>F<!--{en}F--><!--{cn}欢--></span>
+                    <span>e<!--{en}e--><!--{cn}迎--></span>
+                    <span>e<!--{en}e--><!--{cn}您--></span>
+                    <span>l<!--{en}l--><!--{cn}随--></span>
+                    free<!--{en}free--><!--{cn}时-->
+                    <span>t<!--{en}t--><!--{cn}和--></span>
+                    <span>o<!--{en}o--><!--{cn}我--></span>
+                    contact<!--{en}contact--><!--{cn}联-->
+                    <span>m<!--{en}m--><!--{cn}系--></span>
+                    <span>e<!--{en}e--><!--{cn}！--></span>
+                </h2>
+            </div>
+            
             <span>I'd love to hear from you!<!--{en}I'd love to hear from you!--><!--{cn}得到您宝贵的建议是我的荣幸！--></span>
         </header>
         <!---->
