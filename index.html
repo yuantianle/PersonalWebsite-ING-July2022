@@ -21,8 +21,16 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link rel="stylesheet" href="assets/css/ie_fix.css">
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"
+    />
+    
     <script src="assets/lib/components-modernizr/modernizr.js"></script>  <!-- for java script citation-->
-    <script src="assets/lib/jquery/dist/jquery.js"></script>
+     <!--<script src="assets/lib/jquery/dist/jquery.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script>
+
     <script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
     
 </head>
@@ -44,8 +52,13 @@
 </script>
 
 <div class="page-loader">
-    <div class="loader">Loading...</div>
-</div>
+   <!-- <div class="loader">Loading...</div>-->
+    <div class="load-container">
+        <div class="box">
+            <div class="loader"></div>
+        </div>
+      </div>
+    </div>
 <!-- Fixed Top Navigation -->
 <nav id="fixedTopNav" class="navbar navbar-fixed-top main-navigation" itemscope itemtype="https://schema.org/SiteNavigationElement" >
     <div class="container">
@@ -690,10 +703,37 @@
 </section>
 <!-- /Gallery -->    
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.css">
-<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<script type="text/javascript">
+Fancybox.bind('[data-fancybox="gallery1"]', {
+  caption: function (fancybox, carousel, slide) {
+    return (
+      `${slide.index + 1} / ${carousel.slides.length} <br />` + slide.caption
+    );
+  }, 
+
+   Image: {
+    Panzoom: {
+      zoomFriction: 0.7,
+      maxScale: function () {
+        return 5;
+      },
+    },
+    fit: cover,
+  },
+
+  Toolbar: {
+    display: [
+      { id: "counter", position: "left" },
+      "zoom",
+      "slideshow",
+      "fullscreen",
+      "thumbs",
+      "close",
+    ],
+  },
+});
+</script>
 
 <!-- /Photo -->
 <section id="photo" class="section gallery">
@@ -714,10 +754,82 @@
         <iframe src="//player.bilibili.com/player.html?aid=687483410&bvid=BV1XU4y1675u&cid=814575962&page=1" frameborder="2" scrolling="yes" id="video1"></iframe>
 
         <iframe src="//player.bilibili.com/player.html?aid=217478865&bvid=BV1Ua411G7zw&cid=814587837&page=1" frameborder="2" scrolling="yes" id="video2"></iframe></p>
-
-		
         
-        <div class="section-content test-1" style="height:500px;overflow-y:auto">
+        <div class="photo-container test-1" style="height:500px;overflow-y:auto;overflow-x:hidden">
+     
+                <div class="photo-size-manager og-grid og-grid-4col-yuant mb-3">
+                    <!--first is the big, second is the small-->
+                    <li>
+                        <a href="https://i.ibb.co/VgfMPbJ/IMG-6873.jpg"
+                        class="photo-item fancybox"
+                        data-fancybox="gallery1"        
+                        data-fancybox-title="This is title No. 1"
+                        data-caption="This is the caption"
+                    >
+                        <img src="https://i.ibb.co/Tc97X1S/IMG-6873.jpg" width="100%" height="100%" alt="" />
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://i.ibb.co/VgfMPbJ/IMG-6873.jpg"
+                        class="photo-item fancybox"
+                        data-fancybox="gallery1">
+                        <img src="https://i.ibb.co/Tc97X1S/IMG-6873.jpg" width="100%" height="100%">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://i.ibb.co/VgfMPbJ/IMG-6873.jpg"
+                        class="photo-item fancybox"
+                        data-fancybox="gallery1">
+                        <img src="https://i.ibb.co/Tc97X1S/IMG-6873.jpg" width="100%" height="100%">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://i.ibb.co/VgfMPbJ/IMG-6873.jpg"
+                        class="photo-item fancybox"
+                        data-fancybox="gallery1">
+                        <img src="https://i.ibb.co/Tc97X1S/IMG-6873.jpg" width="100%" height="100%">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://i.ibb.co/VgfMPbJ/IMG-6873.jpg"
+                        class="photo-item fancybox"
+                        data-fancybox="gallery1">
+                        <img src="https://i.ibb.co/Tc97X1S/IMG-6873.jpg" width="100%" height="100%">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://i.ibb.co/VgfMPbJ/IMG-6873.jpg"
+                        class="photo-item fancybox"
+                        data-fancybox="gallery1">
+                        <img src="https://i.ibb.co/Tc97X1S/IMG-6873.jpg" width="100%" height="100%">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://i.ibb.co/VgfMPbJ/IMG-6873.jpg"
+                        class="photo-item fancybox"
+                        data-fancybox="gallery1">
+                        <img src="https://i.ibb.co/Tc97X1S/IMG-6873.jpg" width="100%" height="100%">
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://i.ibb.co/VgfMPbJ/IMG-6873.jpg"
+                        class="photo-item fancybox"
+                        data-fancybox="gallery1">
+                        <img src="https://i.ibb.co/Tc97X1S/IMG-6873.jpg" width="100%" height="100%">
+                        </a>
+                    </li>
+                </div>
+            </div>
+
+
+        <!--<div class="section-content test-1" style="height:500px;overflow-y:auto">
 
             
             <ul id="og-grid1" class="og-grid og-grid-4col lazy-loading"> 
@@ -1396,7 +1508,7 @@
                 </li>
 				
 				
-            </ul>
+            </ul>-->
 		</div><!-- section-content -->
 
 	   <!-- <div class="col-md-12">
