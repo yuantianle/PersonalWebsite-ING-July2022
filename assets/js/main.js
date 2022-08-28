@@ -13,7 +13,7 @@ $(document).ready(function () {
 	
 	/*added for the collapse of the pictures [finished debug] */ 
 	$(".fold-button").on("click",function(){
-		var obj = $(this).attr("ins-controls") == "" ? null : $(this).attr("ins-controls");
+		var obj = $(this).attr("is-clicked") == "" ? null : $(this).attr("is-clicked");
 		if(obj){
 			$(obj).slideDown();
 			var top = $(window).scrollTop();
