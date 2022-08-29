@@ -2002,41 +2002,39 @@ blockquote p {
         .team .social-block li a:hover {
           color: #000000; }
 
+
+
+
 .expertise {
-  background: url(../images/backgrounds/bg-expertise.jpg) no-repeat fixed center; 
+  width: 100%;
+  height: 110%;
+  
+  /* Important */
+  position: relative;
 }
 
-@media (min-width: 375px) {
-  .expertise {
-    background: url(../images/backgrounds/bg-expertise.jpg) no-repeat center; 
-    background-size: cover;  
-  }
-}
-@media (min-width: 375px)  and (orientation: landscape){
-  .expertise {
-    background: url(../images/backgrounds/bg-expertise.jpg) no-repeat center;
-    background-size: cover;   
-  }
-}
-@media (min-width: 768px) {
-  .expertise {
-    background: url(../images/backgrounds/bg-expertise.jpg) no-repeat center;
-    background-size: cover;   
-  }
-}
-@media (min-width: 768px)  and (orientation: landscape){
-  .expertise {
-    background: url(../images/backgrounds/bg-expertise.jpg) no-repeat center;
-    background-size: cover;   
-  }
+.expertise-bg-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
-  .expertise {
-    background: url(../images/backgrounds/bg-expertise.jpg) no-repeat fixed center; 
-    background-size: cover;  
-  }
-}
+.expertise-bg {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-image: url(../images/backgrounds/bg-expertise.jpg);
+  transform: translateZ(0);
+  will-change: transform;
+}         
 
 
 
@@ -2105,43 +2103,41 @@ blockquote p {
   .expertise .expertise-description {
     margin-bottom: 0; } }
 .video-player {
-  background: url(../images/backgrounds/origin.jpeg) no-repeat fixed center;
-  background-size: cover;
+  /*background: url(../images/backgrounds/origin.jpeg) no-repeat fixed center;
+  background-size: cover;*/
   color: #ffffff;
   text-transform: uppercase; }
 
-  @media (min-width: 375px) {
-    .video-player {
-      background: url(../images/backgrounds/origin.jpeg) no-repeat center; 
-      background-size: cover;  
-    }
-  }
-  @media (min-width: 375px)  and (orientation: landscape){
-    .video-player {
-      background: url(../images/backgrounds/origin.jpeg) no-repeat center;
-      background-size: cover;   
-    }
-  }
-  @media (min-width: 768px) {
-    .video-player {
-      background: url(../images/backgrounds/origin.jpeg) no-repeat center; 
-      background-size: cover;  
-    }
-  }
-  @media (min-width: 768px)  and (orientation: landscape){
-    .video-player {
-      background: url(../images/backgrounds/origin.jpeg) no-repeat center; 
-      background-size: cover;  
-    }
+  .video-player {
+    width: 100%;
+    height: 110%;
+    
+    /* Important */
+    position: relative;
   }
   
-  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
-    .video-player {
-      background: url(../images/backgrounds/origin.jpeg) no-repeat fixed center; 
-      background-size: cover;  
-    }
+  .video-bg-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
-
+  
+  .video-bg {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../images/backgrounds/origin.jpeg);
+    transform: translateZ(0);
+    will-change: transform;
+  }         
 
 
   .video-player .video-left {
@@ -2487,41 +2483,43 @@ blockquote p {
       margin-top: 0;
       margin-bottom: 15px; } }
 
-.services {
+/*.services {
   background: url(../images/backgrounds/bg-video.jpg) no-repeat fixed center;
-  background-size: cover; }
+  background-size: cover; }*/
 
-  @media (min-width: 375px) {
-    .services {
-      background: url(../images/backgrounds/bg-video.jpg) no-repeat center;
-      background-size: cover;  
-    }
-  }
-  @media (min-width: 375px)  and (orientation: landscape){
-    .services {
-      background: url(../images/backgrounds/bg-video.jpg) no-repeat center; 
-      background-size: cover;  
-    }
-  }
-  @media (min-width: 768px) {
-    .services {
-      background: url(../images/backgrounds/bg-video.jpg) no-repeat center; 
-      background-size: cover;  
-    }
-  }
-  @media (min-width: 768px)  and (orientation: landscape){
-    .services {
-      background: url(../images/backgrounds/bg-video.jpg) no-repeat center; 
-      background-size: cover;  
-    }
+  .services {
+    width: 100%;
+    height: 110%;
+    
+    /* Important */
+    position: relative;
   }
   
-  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
-    .services {
-      background: url(../images/backgrounds/bg-video.jpg) no-repeat fixed center; 
-      background-size: cover;  
-    }
+  .services-bg-wrap {
+    clip: rect(0, auto, auto, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
   }
+  
+  .services-bg {
+    position: fixed;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-image: url(../images/backgrounds/bg-video.jpg);
+    transform: translateZ(0);
+    will-change: transform;
+  }         
+    
+
+
 
 
   .services .service {
