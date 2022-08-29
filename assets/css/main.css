@@ -15,7 +15,7 @@ html, body {
     color: #fff !important;
 } */
 
-/*For disable cellphone functions */
+/*For disable cellphone functions 
 a {
   -webkit-touch-callout:none;
   -webkit-user-select:none;
@@ -23,7 +23,10 @@ a {
   -moz-user-select:none;
   -ms-user-select:none;
   user-select:none;
-}
+}*/
+
+body { -webkit-touch-callout: none !important; }
+a { -webkit-user-select: none !important; }
 
 
 #exp_git{
@@ -2000,7 +2003,43 @@ blockquote p {
           color: #000000; }
 
 .expertise {
-  background: url(../images/backgrounds/bg-expertise.jpg) no-repeat center; }
+  background: url(../images/backgrounds/bg-expertise.jpg) no-repeat fixed center; 
+}
+
+@media (min-width: 375px) {
+  .expertise {
+    background: url(../images/backgrounds/bg-expertise.jpg) no-repeat center; 
+    background-size: cover;  
+  }
+}
+@media (min-width: 375px)  and (orientation: landscape){
+  .expertise {
+    background: url(../images/backgrounds/bg-expertise.jpg) no-repeat center;
+    background-size: cover;   
+  }
+}
+@media (min-width: 768px) {
+  .expertise {
+    background: url(../images/backgrounds/bg-expertise.jpg) no-repeat center;
+    background-size: cover;   
+  }
+}
+@media (min-width: 768px)  and (orientation: landscape){
+  .expertise {
+    background: url(../images/backgrounds/bg-expertise.jpg) no-repeat center;
+    background-size: cover;   
+  }
+}
+
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+  .expertise {
+    background: url(../images/backgrounds/bg-expertise.jpg) no-repeat fixed center; 
+    background-size: cover;  
+  }
+}
+
+
+
   .expertise .section-heading h1, .expertise .section-heading p {
     color: #ffffff; }
   .expertise .section-heading::after {
@@ -2070,6 +2109,41 @@ blockquote p {
   background-size: cover;
   color: #ffffff;
   text-transform: uppercase; }
+
+  @media (min-width: 375px) {
+    .video-player {
+      background: url(../images/backgrounds/origin.jpeg) no-repeat center; 
+      background-size: cover;  
+    }
+  }
+  @media (min-width: 375px)  and (orientation: landscape){
+    .video-player {
+      background: url(../images/backgrounds/origin.jpeg) no-repeat center;
+      background-size: cover;   
+    }
+  }
+  @media (min-width: 768px) {
+    .video-player {
+      background: url(../images/backgrounds/origin.jpeg) no-repeat center; 
+      background-size: cover;  
+    }
+  }
+  @media (min-width: 768px)  and (orientation: landscape){
+    .video-player {
+      background: url(../images/backgrounds/origin.jpeg) no-repeat center; 
+      background-size: cover;  
+    }
+  }
+  
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+    .video-player {
+      background: url(../images/backgrounds/origin.jpeg) no-repeat fixed center; 
+      background-size: cover;  
+    }
+  }
+
+
+
   .video-player .video-left {
     text-align: center;
     font-weight: 300;
@@ -2416,6 +2490,40 @@ blockquote p {
 .services {
   background: url(../images/backgrounds/bg-video.jpg) no-repeat fixed center;
   background-size: cover; }
+
+  @media (min-width: 375px) {
+    .services {
+      background: url(../images/backgrounds/bg-video.jpg) no-repeat center;
+      background-size: cover;  
+    }
+  }
+  @media (min-width: 375px)  and (orientation: landscape){
+    .services {
+      background: url(../images/backgrounds/bg-video.jpg) no-repeat center; 
+      background-size: cover;  
+    }
+  }
+  @media (min-width: 768px) {
+    .services {
+      background: url(../images/backgrounds/bg-video.jpg) no-repeat center; 
+      background-size: cover;  
+    }
+  }
+  @media (min-width: 768px)  and (orientation: landscape){
+    .services {
+      background: url(../images/backgrounds/bg-video.jpg) no-repeat center; 
+      background-size: cover;  
+    }
+  }
+  
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+    .services {
+      background: url(../images/backgrounds/bg-video.jpg) no-repeat fixed center; 
+      background-size: cover;  
+    }
+  }
+
+
   .services .service {
     padding: 30px 15px;
     position: relative;
