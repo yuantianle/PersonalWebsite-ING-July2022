@@ -12,17 +12,22 @@ canvas.height = canvas.width * heightRatio;*/
 $(document).ready(function () {
 	
 	/*added for the collapse of the pictures [finished debug] */ 
+
 	$(".fold-button").on("click",function(){
 		var obj = $(this).attr("is-clicked") == "" ? null : $(this).attr("is-clicked");
 		if(obj){
-			$(obj).slideDown();
-			var top = $(window).scrollTop();
-			$(obj).toggleClass("show");
-			
-			/*added for the collapse of the pictures [finished debug] */
-			$(obj).is(".show") ? $(this).text('load less') : $(this).text('load more');			
+			// $(obj).slideDown();
+			// var top = $(window).scrollTop();
+			// $(obj).toggleClass("show");
+
+			if ($(obj).parent().is(".in") && $(obj).parents('section')[0]) {
+				$(obj).parents('section')[0].scrollIntoView(true);
+			}
+			// /*added for the collapse of the pictures [finished debug]  */
+			$(obj).parent().is(".in") ? $(this).text('load more') : $(this).text('load less');
 		}	
-	});									 
+	});
+
     $("#contactForm").submit(function(e){
 
         e.preventDefault();

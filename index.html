@@ -32,7 +32,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-3.4.0.js"></script>
 
-     <!--<script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>-->
+    <script src="assets/lib/bootstrap/dist/js/bootstrap.js"></script>
     
 </head>
 
@@ -311,7 +311,8 @@
 
         <div class="section-content">
 
-            <ul id="pg-grid" class="pg-grid pg-grid-4col lazy-loading">
+            <div class="collapse" id="pgCollapse" aria-expanded="false">
+            <ul id="pg-grid" class="pg-grid pg-grid-4col lazy-loading show">
 
                 <li>
                     <a href="#"
@@ -351,52 +352,54 @@
 				
 				<li>
 					<a href="#"
-					data-largesrc="https://i.ibb.co/DGy2jZc/CS554HW2.png"
-					data-title="Geometry & parameter smoothing"
-					data-description="Based on the technique of 3D mesh smoothing, implemented parameter smoothing for geometry shape. The influence of different weights scheme and different iteration methods on the smoothed results is explored."
-					style="background-image:url(https://i.ibb.co/g6fytz4/CS554HW2.png)">
+						data-largesrc="https://i.ibb.co/DGy2jZc/CS554HW2.png"
+						data-title="Geometry & parameter smoothing"
+						data-description="Based on the technique of 3D mesh smoothing, implemented parameter smoothing for geometry shape. The influence of different weights scheme and different iteration methods on the smoothed results is explored."
+						style="background-image:url(https://i.ibb.co/g6fytz4/CS554HW2.png)">
 					</a>
 				</li>
 				
 				<li>
 					<a href="#"
-					data-largesrc="https://i.ibb.co/zFyP30h/CS554HW3.png"
-					data-title="Tensor based sketch stylization"
-					data-description="The topological visualization of the mesh surface is realized by the discrete representation theory of analytic geometry. Further implemented the 3D model sketch stylization"
-					style="background-image:url(https://i.ibb.co/8NWnkJN/CS554HW3.png)">
+						data-largesrc="https://i.ibb.co/zFyP30h/CS554HW3.png"
+						data-title="Tensor based sketch stylization"
+						data-description="The topological visualization of the mesh surface is realized by the discrete representation theory of analytic geometry. Further implemented the 3D model sketch stylization"
+						style="background-image:url(https://i.ibb.co/8NWnkJN/CS554HW3.png)">
 					</a>
 				</li>
 				
 				<li>
 					<a href="#"
-					data-largesrc="https://i.ibb.co/Q854K0B/CS554.png"
-					data-title="Linear Rotation-invariant method for meshes deformation"
-					data-description="Realization of Linear Rotation-invariant Coordinates for 3D Meshes deformation"
-					style="background-image:url(https://i.ibb.co/hyzDyQd/CS554.png)">
+						data-largesrc="https://i.ibb.co/Q854K0B/CS554.png"
+						data-title="Linear Rotation-invariant method for meshes deformation"
+						data-description="Realization of Linear Rotation-invariant Coordinates for 3D Meshes deformation"
+						style="background-image:url(https://i.ibb.co/hyzDyQd/CS554.png)">
 					</a>
 				</li>	
 	
 				<li>
 					<a href="#"
-					data-largesrc="https://i.ibb.co/q0tgxHq/cs540.png"
-					data-title="Query platform for climate data"
-					data-description="Implemented a query platform for climate data. Users can query the tuples of climate primary attributes of the corresponding place according to the location and time period."
-					style="background-image:url(https://i.ibb.co/XVhxXKB/CS540.png)">
+						data-largesrc="https://i.ibb.co/q0tgxHq/cs540.png"
+						data-title="Query platform for climate data"
+						data-description="Implemented a query platform for climate data. Users can query the tuples of climate primary attributes of the corresponding place according to the location and time period."
+						style="background-image:url(https://i.ibb.co/XVhxXKB/CS540.png)">
 					</a>
 				</li>
 								
 				<li>
 					<a href="#"
-					data-largesrc="https://i.ibb.co/f9trGYT/CS537.png"
-					data-title="Poker Catcher"
-					data-description="Built a Playing Cards Detection program which can detect the playing cards in the image by using the technique of CNN."
-					style="background-image:url(https://i.ibb.co/qFbtS07/CS537.png)">
+						data-largesrc="https://i.ibb.co/f9trGYT/CS537.png"
+						data-title="Poker Catcher"
+						data-description="Built a Playing Cards Detection program which can detect the playing cards in the image by using the technique of CNN."
+						style="background-image:url(https://i.ibb.co/qFbtS07/CS537.png)">
 					</a>
 				</li>
 				
             </ul>
+            </div>
 			<div class = "col-md-12">
-					<button class="btn btn-dark btn-block fold-button" type="button" is-clicked="#pg-grid">
+                    <!-- <button class="btn btn-dark btn-block fold-button" type="button" is-clicked="#pg-grid"> -->
+                    <button class="btn btn-dark btn-block fold-button" type="button" is-clicked="#pg-grid" data-toggle="collapse" data-target="#pgCollapse">
 							Load More<!--{en}Load More--><!--{cn}展开更多-->
 					</button>
 			</div>
@@ -452,15 +455,87 @@
             
         <script src = "assets/js/jquery.hovercard.min.js"></script>                          
         <script type="text/javascript">
-        $(document).ready(function () {
-            var hoverHTMLDemoBasic = 'HOLA! Here you can do some basic operations: <br> 1. Mouse Left Button: press + drag == Move your camera. <br> 2. Mouse Middle Button: scrow == Zoom in / zoom out. <br> 3. Control box (left-top on canvas): Change any parameters that you want to implement different effects.';
-            $("#demo-basic").hovercard({
-                detailsHTML: hoverHTMLDemoBasic,
-                width: 500,
-                openOnLeft: false,
-                cardImgSrc: 'assets/js/Three_js/texture/Mark.jpg'
-            });
-        });
+            var isMedia = (function(){
+
+                var div;
+
+                return function(query){
+                
+                    //if the <div> doesn't exist, create it and make sure it's hidden
+                    if (!div){
+                        div = document.createElement("div");
+                        div.id = "ncz1";
+                        div.style.cssText = "position:absolute;top:-1000px";
+                        document.body.insertBefore(div, document.body.firstChild);            
+                    }
+                
+                    div.innerHTML = "_<style media=\"" + query + "\"> #ncz1 { width: 1px; }</style>";
+                    div.removeChild(div.firstChild);
+                    return div.offsetWidth == 1;    
+                };
+            })();
+
+
+                if (isMedia("(min-width: 375px)")){
+                    $(document).ready(function () {
+                        var hoverHTMLDemoBasic = 'HOLA! Here you can do some basic operations: <br> 1. Finger press + drag == Move your camera. <br> 2. Two finger\'s drag == Zoom in / zoom out. <br> 3. Control box (left-top on canvas): Change any parameters that you want to implement different effects.';
+                        $("#demo-basic").hovercard({
+                        detailsHTML: hoverHTMLDemoBasic,
+                        width: 300,
+                        openOnLeft: false,
+                        openOntop:true,
+                        cardImgSrc: 'assets/js/Three_js/texture/Mark.jpg'
+                    });
+                    });
+                }
+                if (isMedia("(min-width: 375px) and (orientation: landscape)")){
+                    $(document).ready(function () {
+                        var hoverHTMLDemoBasic = 'HOLA! Here you can do some basic operations: <br> 1. Finger press + drag == Move your camera. <br> 2. Two finger\'s drag == Zoom in / zoom out. <br> 3. Control box (left-top on canvas): Change any parameters that you want to implement different effects.';
+                        $("#demo-basic").hovercard({
+                        detailsHTML: hoverHTMLDemoBasic,
+                        width: 300,
+                        openOnLeft: false,
+                        openOntop:true,
+                        cardImgSrc: 'assets/js/Three_js/texture/Mark.jpg'
+                    });
+                    });
+                }
+                if (isMedia("(min-width: 768px)")){
+                    $(document).ready(function () {
+                        var hoverHTMLDemoBasic = 'HOLA! Here you can do some basic operations: <br> 1. Finger press + drag == Move your camera. <br> 2. Two finger\'s drag == Zoom in / zoom out. <br> 3. Control box (left-top on canvas): Change any parameters that you want to implement different effects.';
+                        $("#demo-basic").hovercard({
+                        detailsHTML: hoverHTMLDemoBasic,
+                        width: 400,
+                        openOnLeft: false,
+                        openOntop:true,
+                        cardImgSrc: 'assets/js/Three_js/texture/Mark.jpg'
+                    });
+                    });
+                }
+                if (isMedia("(min-width: 768px) and (orientation: landscape)")){
+                    $(document).ready(function () {
+                        var hoverHTMLDemoBasic = 'HOLA! Here you can do some basic operations: <br> 1. Finger press + drag == Move your camera. <br> 2. Two finger\'s drag == Zoom in / zoom out. <br> 3. Control box (left-top on canvas): Change any parameters that you want to implement different effects.';
+                        $("#demo-basic").hovercard({
+                        detailsHTML: hoverHTMLDemoBasic,
+                        width: 400,
+                        openOnLeft: false,
+                        openOntop:true,
+                        cardImgSrc: 'assets/js/Three_js/texture/Mark.jpg'
+                    });
+                    });
+                }
+                if (isMedia("screen and (min-device-width: 1200px) and (max-device-width: 1600px)")){
+                    $(document).ready(function () {
+                        var hoverHTMLDemoBasic = 'HOLA! Here you can do some basic operations: <br> 1. Mouse Left Button: press + drag == Move your camera. <br> 2. Mouse Middle Button: scrow == Zoom in / zoom out. <br> 3. Control box (left-top on canvas): Change any parameters that you want to implement different effects.';
+                        $("#demo-basic").hovercard({
+                        detailsHTML: hoverHTMLDemoBasic,
+                        width: 500,
+                        openOnLeft: false,
+                        cardImgSrc: 'assets/js/Three_js/texture/Mark.jpg'
+                    });
+                    });
+                }
+        
         </script>
         
 		            
@@ -566,8 +641,8 @@
 
         <div class="section-content">
 
-            
-            <ul id="og-grid" class="og-grid og-grid-4col lazy-loading">
+            <div class="collapse" id="ogCollapse" aria-expanded="false">
+            <ul id="og-grid" class="og-grid og-grid-4col lazy-loading show">
                 <li> 
                     <a href="#"
                        data-largesrc="https://i.ibb.co/N9rR09L/Monet.jpg"
@@ -694,8 +769,10 @@
 
 						
             </ul>
+            </div>
 			<div class = "col-md-12">
-					<button class="btn btn-dark btn-block fold-button" type="button" is-clicked="#og-grid">
+					<!-- <button class="btn btn-dark btn-block fold-button" type="button" is-clicked="#og-grid"> -->
+                    <button class="btn btn-dark btn-block fold-button" type="button" is-clicked="#og-grid" data-toggle="collapse" data-target="#ogCollapse">
 							Load More<!--{en}Load More--><!--{cn}展开更多-->
 					</button>
 			</div>
@@ -2171,7 +2248,7 @@ Fancybox.bind('[data-fancybox="gallery1"]', {
 <script src="assets/lib/waypoints/lib/shortcuts/inview.min.js"></script>
 <script src="assets/lib/magnific-popup/dist/jquery.magnific-popup.js"></script>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
 
 <script src="assets/js/main.js"></script>
 <script src="assets/js/album.js"></script>
@@ -2194,7 +2271,7 @@ Fancybox.bind('[data-fancybox="gallery1"]', {
 
 <!--forbidden copy-->
 <script type="text/javascript">
-    document.oncontextmenu=new Function("event.returnValue=false");
+    //document.oncontextmenu=new Function("event.returnValue=false");
     //document.onselectstart=new Function("event.returnValue=false");
 </script>
 
@@ -2208,6 +2285,39 @@ Fancybox.bind('[data-fancybox="gallery1"]', {
         }
     };
 </script>-->
+
+<!--forbidden mobile-->
+<script type="text/javascript">
+            //ios
+            document.oncontextmenu = function (e) {
+                console.log('oncontextmenu');
+                e.preventDefault();
+            };
+            document.addEventListener('selectstart', function(e) {
+            console.log('selectstart');
+            e.preventDefault();
+            }, true) 
+            //安卓
+            document.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+            });
+            document.ontouchend = function () {
+                throw new Error("NO ERRPR:禁止长按弹出");
+            }
+            window.ontouchstart = function(e) {
+                e.preventDefault();
+            };
+            document.body.addEventListener('touchstart', function () { });
+            document.body.onbeforecopy = function () {
+                window.getSelection().removeAllRanges();
+            }
+            document.body.oncopy = function () {
+                window.getSelection().removeAllRanges();
+                return false;
+            }
+
+</script>
+
 
 <script type="text/javascript">
     var script=document.createElement('script');

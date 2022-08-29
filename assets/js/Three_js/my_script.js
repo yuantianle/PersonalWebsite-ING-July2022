@@ -39,6 +39,26 @@ const geometries = [
      new THREE.IcosahedronGeometry(0.67, 24), // Sphere
 ];
 
+var isMedia = (function(){
+
+     var div;
+ 
+     return function(query){
+ 
+         //if the <div> doesn't exist, create it and make sure it's hidden
+         if (!div){
+             div = document.createElement("div");
+             div.id = "ncz1";
+             div.style.cssText = "position:absolute;top:-1000px";
+             document.body.insertBefore(div, document.body.firstChild);            
+         }
+ 
+         div.innerHTML = "_<style media=\"" + query + "\"> #ncz1 { width: 1px; }</style>";
+         div.removeChild(div.firstChild);
+         return div.offsetWidth == 1;    
+     };
+ })();
+ 
 /*-------------------------------
      Initiation
 --------------------------------*/
@@ -105,8 +125,27 @@ function initRenender()
 function refreshWindown(){
      //add event monitor, adapt the window
      window.addEventListener('resize', function(){
-         var width = window.innerWidth*0.83;
-         var height = window.innerHeight*0.8;
+          if (isMedia("(min-width: 375px)")){
+               var width = window.innerWidth*0.92;
+               var height = window.innerHeight*0.57;
+          }
+          if (isMedia("(min-width: 375px) and (orientation: landscape)")){
+               var width = window.innerWidth*0.95;
+               var height = window.innerHeight*0.77;
+          }
+          if (isMedia("(min-width: 768px)")){
+               var width = window.innerWidth*0.93;
+               var height = window.innerHeight*0.57;
+          }
+          if (isMedia("(min-width: 768px) and (orientation: landscape)")){
+               var width = window.innerWidth*0.92;
+               var height = window.innerHeight*0.67;
+          }
+          if (isMedia("screen and (min-device-width: 1200px) and (max-device-width: 1600px)")){
+               var width = window.innerWidth*0.83;
+               var height = window.innerHeight*0.77;
+          }
+         
          renderer.setSize(width,height);
          camera.aspect = width/height;
          camera.updateProjectionMatrix();
@@ -115,8 +154,27 @@ function refreshWindown(){
 }
 
 function setWindown(){
-     var width = window.innerWidth*0.83;
-     var height = window.innerHeight*0.77;
+      
+     if (isMedia("(min-width: 375px)")){
+          var width = window.innerWidth*0.92;
+          var height = window.innerHeight*0.57;
+     }
+     if (isMedia("(min-width: 375px) and (orientation: landscape)")){
+          var width = window.innerWidth*0.95;
+          var height = window.innerHeight*0.77;
+     }
+     if (isMedia("(min-width: 768px)")){
+          var width = window.innerWidth*0.93;
+          var height = window.innerHeight*0.57;
+     }
+     if (isMedia("(min-width: 768px) and (orientation: landscape)")){
+          var width = window.innerWidth*0.92;
+          var height = window.innerHeight*0.67;
+     }
+     if (isMedia("screen and (min-device-width: 1200px) and (max-device-width: 1600px)")){
+          var width = window.innerWidth*0.83;
+          var height = window.innerHeight*0.77;
+     }
      renderer.setSize(width,height);
      camera.aspect = width/height;
      camera.updateProjectionMatrix();

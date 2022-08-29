@@ -1,16 +1,30 @@
+html{
+  scroll-behavior: smooth;
+}
+
 html, body {
   position: relative;
   overflow-x: hidden; 
 
   }
 
-/*For Debug Boundary 
+/*For Debug Boundary
 *{
     outline: solid #f00 1px !important;
     background: #000 !important;
     color: #fff !important;
+} */
+
+/*For disable cellphone functions */
+a {
+  -webkit-touch-callout:none;
+  -webkit-user-select:none;
+  -khtml-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none;
 }
-*/
+
 
 #exp_git{
   width: 100px;
@@ -1986,7 +2000,7 @@ blockquote p {
           color: #000000; }
 
 .expertise {
-  background: url(../images/backgrounds/bg-expertise.jpg) no-repeat fixed center; }
+  background: url(../images/backgrounds/bg-expertise.jpg) no-repeat center; }
   .expertise .section-heading h1, .expertise .section-heading p {
     color: #ffffff; }
   .expertise .section-heading::after {
@@ -3544,4 +3558,24 @@ blockquote p {
 .gallery .og-grid.show li,
 .projects .pg-grid.show li{
 	display:inline-block !important;
+}
+
+#pgCollapse.collapse[aria-expanded="false"] {
+  display: block;
+  height: 300px !important;
+  overflow: hidden;
+}
+
+#pgCollapse.collapsing[aria-expanded="false"] {
+  height: 300px !important;
+}
+
+#ogCollapse.collapse[aria-expanded="false"] {
+  display: block;
+  height: 280px !important;
+  overflow: hidden;
+}
+
+#ogCollapse.collapsing[aria-expanded="false"] {
+  height: 280px !important;
 }
