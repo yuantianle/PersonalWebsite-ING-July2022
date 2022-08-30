@@ -133,18 +133,45 @@ function refreshWindown(){
                var width = window.innerWidth*0.95;
                var height = window.innerHeight*0.77;
           }
+          if (isMedia("(min-width: 744px)")){
+               var width = window.innerWidth*0.96;
+               var height = window.innerHeight*0.57;
+          }  
+     
           if (isMedia("(min-width: 768px)")){
                var width = window.innerWidth*0.93;
                var height = window.innerHeight*0.57;
+          }    
+          if (isMedia("(min-width: 810px)")){
+               var width = window.innerWidth*0.88;
+               var height = window.innerHeight*0.57;
           }
-          if (isMedia("(min-width: 768px) and (orientation: landscape)")){
-               var width = window.innerWidth*0.92;
-               var height = window.innerHeight*0.67;
+          if (isMedia("(min-width: 1024px)")){
+               var width = window.innerWidth*0.91;
+               var height = window.innerHeight*0.57;
           }
+     
           if (isMedia("screen and (min-device-width: 1200px) and (max-device-width: 1600px)")){
                var width = window.innerWidth*0.83;
                var height = window.innerHeight*0.77;
           }
+     
+          if (isMedia("(min-width: 810px) and (orientation: landscape)")){
+               var width = window.innerWidth*0.88;
+               var height = window.innerHeight*0.67;
+          }    
+          
+          if (isMedia("(min-width: 768px) and (orientation: landscape)")){
+               var width = window.innerWidth*0.92;
+               var height = window.innerHeight*0.67;
+          }
+     
+          if (isMedia("(min-width: 744px) and (orientation: landscape)")){
+               var width = window.innerWidth*0.84;
+               var height = window.innerHeight*0.77;
+          } 
+     
+          
          
          renderer.setSize(width,height);
          camera.aspect = width/height;
@@ -163,18 +190,44 @@ function setWindown(){
           var width = window.innerWidth*0.95;
           var height = window.innerHeight*0.77;
      }
+     if (isMedia("(min-width: 744px)")){
+          var width = window.innerWidth*0.96;
+          var height = window.innerHeight*0.57;
+     }  
+
      if (isMedia("(min-width: 768px)")){
           var width = window.innerWidth*0.93;
           var height = window.innerHeight*0.57;
+     }    
+     if (isMedia("(min-width: 810px)")){
+          var width = window.innerWidth*0.88;
+          var height = window.innerHeight*0.57;
      }
-     if (isMedia("(min-width: 768px) and (orientation: landscape)")){
-          var width = window.innerWidth*0.92;
-          var height = window.innerHeight*0.67;
+     if (isMedia("(min-width: 1024px)")){
+          var width = window.innerWidth*0.91;
+          var height = window.innerHeight*0.57;
      }
+
      if (isMedia("screen and (min-device-width: 1200px) and (max-device-width: 1600px)")){
           var width = window.innerWidth*0.83;
           var height = window.innerHeight*0.77;
      }
+
+     if (isMedia("(min-width: 810px) and (orientation: landscape)")){
+          var width = window.innerWidth*0.88;
+          var height = window.innerHeight*0.67;
+     }    
+     
+     if (isMedia("(min-width: 768px) and (orientation: landscape)")){
+          var width = window.innerWidth*0.92;
+          var height = window.innerHeight*0.67;
+     }
+
+     if (isMedia("(min-width: 744px) and (orientation: landscape)")){
+          var width = window.innerWidth*0.84;
+          var height = window.innerHeight*0.77;
+     } 
+
      renderer.setSize(width,height);
      camera.aspect = width/height;
      camera.updateProjectionMatrix();
