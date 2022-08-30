@@ -1,3 +1,4 @@
+
 html{
   scroll-behavior: smooth;
 }
@@ -31,10 +32,13 @@ a { -webkit-user-select: none !important; }
 .pattern{
 	width:100%;
 	height:100%;
-	position:fixed;
+	position:absolute;
 	top:0px;
 	left:0px;
-	background:transparent url(../images/backgrounds/pattern.png) repeat top left;
+	/*background:transparent url(../images/backgrounds/pattern.png) repeat top left;*/
+  background-color: #00000000;
+  background-image: radial-gradient(rgba(0, 0, 0, 0.7) 0.75px, transparent 0);
+  background-size: 2.23px 2.23px;
 	z-index:2;
 }
 
@@ -1338,7 +1342,7 @@ audio::-webkit-media-controls-volume-slider {
 
   @keyframes animate
   {
-    0%
+   0%
     {
         transform: rotate(0deg);
     }
@@ -1362,6 +1366,7 @@ audio::-webkit-media-controls-volume-slider {
     {
         transform: rotate(90deg);
     }
+    
   }
 
 .container {
@@ -3606,7 +3611,7 @@ blockquote p {
     max-height: 100%;
     max-width: 100%;}
 .gallery .og-details {
-  padding: 0px 40px 0 40px;}
+  padding: 0px 40px 0 20px;}
   .gallery .og-details h3 {
     font-weight: 300;
     font-size: 52px;
@@ -3960,22 +3965,42 @@ blockquote p {
 	display:inline-block !important;
 }
 
-#pgCollapse.collapse[aria-expanded="false"] {
+#pgCollapse.collapse[aria-expanded="false"][data-preview="true"] {
+  display: block;
+  height: 850px !important;
+  overflow: hidden;
+}
+
+#pgCollapse.collapsing[aria-expanded="false"][data-preview="true"] {
+  height: 850px !important;
+}
+
+#pgCollapse.collapse[aria-expanded="false"][data-preview="false"] {
   display: block;
   height: 300px !important;
   overflow: hidden;
 }
 
-#pgCollapse.collapsing[aria-expanded="false"] {
+#pgCollapse.collapsing[aria-expanded="false"][data-preview="false"] {
   height: 300px !important;
 }
 
-#ogCollapse.collapse[aria-expanded="false"] {
+#ogCollapse.collapse[aria-expanded="false"][data-preview="true"] {
+  display: block;
+  height: 820px !important;
+  overflow: hidden;
+}
+
+#ogCollapse.collapsing[aria-expanded="false"][data-preview="true"] {
+  height: 820px !important;
+}
+
+#ogCollapse.collapse[aria-expanded="false"][data-preview="false"] {
   display: block;
   height: 280px !important;
   overflow: hidden;
 }
 
-#ogCollapse.collapsing[aria-expanded="false"] {
+#ogCollapse.collapsing[aria-expanded="false"][data-preview="false"] {
   height: 280px !important;
 }
