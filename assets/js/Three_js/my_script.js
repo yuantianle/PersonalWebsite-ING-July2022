@@ -125,9 +125,9 @@ function initRenender()
 function refreshWindown(){
      //add event monitor, adapt the window
      window.addEventListener('resize', function(){
-
-          var width = window.clientWidth;
-          var height = window.clientHeight;
+          container = document.getElementById('canvas');
+          var width = $(container).width();
+          var height = $(container).height()/1.3;
           
          
          renderer.setSize(width,height);
@@ -139,7 +139,7 @@ function refreshWindown(){
 
 function setWindown(){
       
-     if (isMedia("(min-width: 375px)")){
+    /* if (isMedia("(min-width: 375px)")){
           var width = window.innerWidth*0.92;
           var height = window.innerHeight*0.57;
      }
@@ -183,7 +183,10 @@ function setWindown(){
      if (isMedia("(min-width: 744px) and (orientation: landscape)")){
           var width = window.innerWidth*0.84;
           var height = window.innerHeight*0.77;
-     } 
+     } */
+     container = document.getElementById('canvas');
+     var width = $(container).width();
+     var height = window.innerHeight/1.4;
 
      renderer.setSize(width,height);
      camera.aspect = width/height;
