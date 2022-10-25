@@ -1,0 +1,335 @@
+﻿@charset "utf-8";
+
+/*
+/*	Copyright (c) 2022 Marketify
+/*	Author: Marketify
+/*	This file is made for CURRENT TEMPLATE
+01)	EDREA BASE
+02)	EDREA MOBILE MENU
+03) EDREA HEADER
+04) EDREA CONTENT
+05) EDREA HOME
+06) EDREA ABOUT
+07) EDREA PORTFOLIO
+08) EDREA NEWS
+09) EDREA CONTACT
+10) EDREA MAGIC CURSOR
+11) EDREA MEDIA QUERIES (FOR SMALL DEVIVES)
+
+/*---------------------------------------------------*/
+/*	01) EDREA BASE
+/*---------------------------------------------------*/
+
+:root{
+    --main-color: #eb4a4c;
+}
+html {
+	overflow-x: hidden;
+	padding: 0px;
+	margin: 0px
+}
+body{
+	overflow-x: hidden;
+	width: 100%;
+	font-family: "Mulish";
+	font-size: 16px;
+	line-height: 1.7;
+	letter-spacing: 0.2px;
+	word-wrap: break-word;
+	font-weight: 400;
+	background-color: #000;
+	color: #A2A2A2;
+}
+svg{
+	fill: currentcolor;
+	width: 15px;
+	height: 15px;
+}
+img.svg{
+	width: 15px;
+	height: 15px;
+}
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color: #A2A2A2;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color: #A2A2A2;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color: #A2A2A2;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #A2A2A2;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #A2A2A2;
+}
+
+::placeholder { /* Most modern browsers support this now. */
+   color: #A2A2A2;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight:600;
+	line-height: 1.3;
+	font-family: "Poppins";
+	color: #fff;
+}
+h1 { font-size: 45px; }
+h2 { font-size: 36px; }
+h3 { font-size: 30px; }
+h4 { font-size: 24px; }
+h5 { font-size: 20px; }
+h6 { font-size: 16px; }
+
+#preloader{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: 99999;
+    display: flex;
+}
+#preloader:before,
+#preloader:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+#preloader:after{
+    left: auto;
+    right: 0;
+}
+#preloader .loader_line{
+    margin: auto;
+    width: 1px;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    -webkit-transition: all 0.8s ease 0s;
+    -o-transition: all 0.8s ease 0s;
+    transition: all 0.8s ease 0s;
+}
+.loader_line:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1px;
+    height: 0%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: #000;
+    -webkit-animation: lineheight 1000ms ease-in-out 0s forwards;
+    -o-animation: lineheight 1000ms ease-in-out 0s forwards;
+    animation: lineheight 1000ms ease-in-out 0s forwards;
+}
+.loader_line:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 100%;
+    background-color: #ddd;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    -webkit-animation: lineround 1200ms linear 0s infinite;
+    -o-animation: lineround 1200ms linear 0s infinite;
+    animation: lineround 1200ms linear 0s infinite;
+    animation-delay: 2000ms;
+}
+
+@keyframes lineheight{
+    0%{
+        height: 0%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+@keyframes lineround{
+    0%{
+        -webkit-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+    100%{
+        -webkit-transform: translateY(200%);
+        -ms-transform: translateY(200%);
+        -o-transform: translateY(200%);
+        transform: translateY(200%);
+    }
+}
+
+/*hiding all*/
+.preloaded .loader_line:after{
+    opacity: 0;
+}
+.preloaded  .loader_line{
+    opacity: 0;
+    height: 100%!important;
+}
+.preloaded:before,
+.preloaded:after{
+    -webkit-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+    -o-animation: preloadedzero 300ms ease-in-out 500ms forwards;
+    animation: preloadedzero 300ms ease-in-out 500ms forwards;
+}
+@keyframes preloadedzero{
+    0%{
+        width: 50%;
+    }
+    100%{
+        width: 0%;
+    }
+}
+
+.waves {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+	z-index: -1;
+}
+
+/*-----------------------------------------
+    Cursor Effects
+------------------------------------------*/
+
+.mycursor
+{
+   width: 30px;
+   height: 30px;
+   border: 2px solid rgb(255, 188, 4);
+   border-radius: 50%;
+   transform: translate(-50%, -50%);
+   position: absolute;
+   transition-duration: 300ms;
+   transition-timing-function: ease-out;
+   animation: cursorAnim .5s infinite alternate;
+   z-index: 1000000;
+   pointer-events: none;
+}
+.mycursor::after
+{
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: .5;
+  top: -7px;
+  left: -7px;
+  animation: cursorAnim1 .5s infinite alternate;
+}
+@keyframes cursorAnim {
+    from{
+      transform: scale(1);
+    }
+    to{
+      transform: scale(.7);
+    }
+  
+}
+@keyframes cursorAnim1 {
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(.4);
+  }
+
+}
+
+.expand{
+  animation: cursorAnim2 .5s forwards;
+  border: 1px solid rgb(25, 0, 255);
+}
+@keyframes cursorAnim2 {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(3);
+  }
+  100%{
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+
+/*---------------------------------------------------*/
+/*	11) EDREA MEDIA QUERIES (FOR SMALL DEVICES)
+/*---------------------------------------------------*/
+
+@media (max-width: 1400px) {
+	body{font-size: 15px;}
+	.edrea_tm_header{width: 800px;}
+	.edrea_tm_header .header_inner{padding-top: 30px;}
+	.edrea_tm_content{top: 80px;bottom: 80px;width: 800px;}
+	.edrea_tm_home .name{font-size: 55px;margin-bottom: 17px;}
+	.edrea_tm_home .job{font-size: 23px;margin-bottom: 32px;}
+	.edrea_tm_about .right .short .name{font-size: 32px;margin-bottom: 12px;}
+	.edrea_tm_about .right .short{margin-bottom: 20px;padding-bottom: 25px;}
+	.edrea_tm_about .right .short{margin-bottom: 30px;}
+	.edrea_tm_about .right{padding-left: 75px;}
+	.edrea_tm_about .right .text{margin-bottom: 30px;}
+	.edrea_tm_button a{padding: 8px 40px;}
+	.edrea_tm_contact .wrapper{padding-top: 50px;}
+	.edrea_tm_portfolio .portfolio_list{padding-top: 50px;}
+	.edrea_tm_news .news_list{padding-top: 50px;}
+	.edrea_tm_news .news_list .image{max-height: 150px;}
+	.edrea_tm_news .news_list .details{padding: 25px 20px 22px 20px;}
+}
+@media (max-width: 1040px) {
+	.mouse-cursor{display: none;}
+	#preloader{display: none;}
+	.edrea_tm_header{display: none;}
+	.edrea_tm_topbar{display: block;}
+	.edrea_tm_content{width: 100%;top: 70px;bottom: 70px;}
+	.edrea_tm_home{padding: 0px 20px;}
+	.edrea_tm_about{flex-direction: column;align-items: baseline;padding: 0px 20px;}
+	.edrea_tm_about .left{width: 100%;margin-bottom: 40px;}
+	.edrea_tm_about .right{width: 100%;padding-left: 0px;}
+	.edrea_tm_about .right .short .name{font-size: 30px;margin-bottom: 13px;}
+	.edrea_tm_about .right .short .job{font-size: 16px;}
+	.edrea_tm_about .right .short{margin-bottom: 19px;padding-bottom: 25px;}
+	.edrea_tm_main_title h3{font-size: 26px;}
+	.edrea_tm_portfolio{padding: 0px 20px;}
+	.edrea_tm_swiper_progress{margin-top: 25px;}
+	.edrea_tm_news{padding: 0px 20px;}
+	.edrea_tm_news .news_list .image{max-height: 100%;}
+	.edrea_tm_contact{padding: 0px 20px;}
+	.edrea_tm_contact .wrapper{flex-direction: column;align-items: baseline;}
+	.edrea_tm_contact .wrapper .left{padding: 0px;width: 100%;margin-bottom: 20px;}
+	.edrea_tm_contact .wrapper .right{padding: 0px;width: 100%;}
+	.edrea_tm_contact .fields .first ul{margin: 0px;}
+	.edrea_tm_contact .fields .first ul li{width: 100%;padding-left: 0px;}
+	.edrea_tm_contact .fields .first ul li:first-child{margin-bottom: 20px;}
+}
+@media (max-width: 768px) {
+	.edrea_tm_home .name{font-size: 40px;margin-bottom: 14px;}
+	.edrea_tm_home .job{font-size: 18px;margin-bottom: 30px;}
+	.circular_progress_bar ul li{width: 50%;}
+}
