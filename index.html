@@ -36,6 +36,22 @@
 	</div>
 	<!-- /PRELOADER -->
 	
+	<!-- MOUSE -->
+	<div class= "mycursor"></div>
+	<script>
+		const cursor = document.querySelector('.mycursor');
+		document.addEventListener('mousemove', e =>{
+			cursor.setAttribute("style","top: "+(e.pageY-15)+"px; left: "+(e.pageX-15)+"px;")
+		document.addEventListener('click',()=>{
+			cursor.classList.add("expand");
+			setTimeout(()=>{
+				cursor.classList.remove("expand");
+			}, 500)
+		})
+		})
+	</script>
+	<!-- /MOUSE -->
+
 	<!-- WRAPPER ALL -->
 	<div> 	
 	
@@ -62,7 +78,7 @@
 							</span>
 						</h3>
 						<div class="edrea_tm_button">
-							<a href="./Portfolio">Portfolio</a>&nbsp&nbsp&nbsp&nbsp<a href="https://yuantianle.github.io/">Blog</a>
+							<a href="./Portfolio">Portfolio</a>&nbsp&nbsp&nbsp&nbsp<a href="https://yuantianle.github.io/jekyll-rtd-theme/">Blog</a>
 						</div>
 					</div>
 				</div>
@@ -72,20 +88,6 @@
 			
 		</div>
 		<!-- /CONTENT -->
-		
-		<div class= "mycursor"></div>
-		<script>
-			const cursor = document.querySelector('.mycursor');
-			document.addEventListener('mousemove', e =>{
-				cursor.setAttribute("style","top: "+(e.pageY-15)+"px; left: "+(e.pageX-15)+"px;")
-			document.addEventListener('click',()=>{
-				cursor.classList.add("expand");
-				setTimeout(()=>{
-					cursor.classList.remove("expand");
-				}, 500)
-			})
-			})
-		</script>
 
 	</div>
 	<!-- / WRAPPER ALL -->
