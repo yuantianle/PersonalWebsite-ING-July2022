@@ -10,8 +10,8 @@
 
 <link rel="icon" type="image/png" href="./Portfolio/self.ico" />
 
-<meta name="description" content="Name of your web site">
-<meta name="author" content="Marketify">
+<meta name="description" content="Tianle Yuan's website">
+<meta name="author" content="Tianle Yuan">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -54,11 +54,15 @@
 
 	<!-- WRAPPER ALL -->
 	<div> 	
-	
+		<div>
+            <a class = "languagechoose1" href="javascript:tran.setLang('en');">English</a>
+            <a class = "languagechoose2" href="javascript:tran.setLang('cn');">中文</a>
+        </div>
+		
 		<!-- WAVE DOTS -->
 		<div class="waves"></div>
 		<!-- WAVE DOTS -->
-		
+
 		<!-- CONTENT -->
 		<div class="edrea_tm_content">
 		
@@ -66,19 +70,21 @@
 			<div class="edrea_tm_section animated" id="home">
 				<div class="section_inner">
 					<div class="edrea_tm_home">
-						<h3 class="name">Tianle <span class="coloring">Yuan</span></h3>
+						<h3 class="name">Tianle<!--{en}Tianle--><!--{cn}袁--><span class="namec"> Yuan<!--{en} Yuan--><!--{cn}天乐--></span></h3>
 						<h3 class="job">
 							<span class="cd-headline rotate-1"> <!-- ANIMATE TEXT VALUES: zoom, rotate-1, letters type, letters rotate-2, loading-bar, slide, clip, letters rotate-3, letters scale, push,  -->
-								<span class="blc">An&nbspOptimistic</span>
+								<p><span class="blc">An Optimistic<!--{en}An Optimistic--><!--{cn}一位乐观的--></span>
 								<span class="cd-words-wrapper">
-								  <b class="is-visible">&nbspCG Geek</b>
-								  <b>Dilettante</b>
-								  <b>MusicLover</b>
-								</span>
+								  <b class="is-visible">&nbspCG&nbspGeek<!--{en} CG Geek--><!--{cn}  计算机图形极客--></b>
+								  <b>&nbspDilettante<!--{en} Dilettante--><!--{cn}  绘画痴迷人--></b>
+								  <b>&nbspMusicLover<!--{en} MusicLover--><!--{cn}  音乐爱好者--></b>
+								</span></p>
 							</span>
 						</h3>
 						<div class="edrea_tm_button">
-							<a href="./Portfolio">Portfolio</a>&nbsp&nbsp&nbsp&nbsp<a href="https://yuantianle.github.io/jekyll-rtd-theme/">Blog</a>
+							<a href="./Portfolio">🔮Portfolio<!--{en}🔮Portfolio--><!--{cn}🔮成册展示--></a>&nbsp&nbsp&nbsp<a href="https://yuantianle.github.io/jekyll-rtd-theme/">🎯Blog<!--{en}🎯Blog--><!--{cn}🎯博客--></a><br>
+							<br />
+							<a href="./3D_Exhibition/">✨Virtual Exhibition<!--{en}✨Virtual Exhibition--><!--{cn}✨虚拟画展--></a>
 						</div>
 					</div>
 				</div>
@@ -98,6 +104,71 @@
 <script src="./js/plugins.js"></script>
 <script src="./js/init.js"></script>
 <!-- /SCRIPTS -->
+
+<!-- tranlate -->
+<script type="text/javascript" src="./Portfolio/assets/js/translater.js"></script>
+<script type="text/javascript">
+    tran = new Translater();
+    if (tran.getLang() === "default") 
+    {
+        tran.setLang('en');
+    }
+    var tran = new Translater({
+        lang:"en"
+    });
+    localStorage.setItem("language","en");
+</script>
+
+<!--forbidden copy-->
+<script type="text/javascript">
+    //document.oncontextmenu=new Function("event.returnValue=false");
+    //document.onselectstart=new Function("event.returnValue=false");
+</script>
+
+<!--forbidden F12-->
+<script type="text/javascript">
+    document.onkeydown = function () {
+        if (window.event && window.event.keyCode == 123) {
+            event.keyCode = 0;
+            event.returnValue = false;
+            return false;
+        }
+    };
+</script>
+
+
+<!--forbidden mobile-->
+<script type="text/javascript">
+            //ios
+            document.oncontextmenu = function (e) {
+                console.log('oncontextmenu');
+                e.preventDefault();
+            };
+            document.addEventListener('selectstart', function(e) {
+            console.log('selectstart');
+            e.preventDefault();
+            }, true) 
+            //安卓
+            document.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+            });
+            document.ontouchend = function () {
+                throw new Error("NO ERRPR:禁止长按弹出");
+            }
+            window.ontouchstart = function(e) {
+                e.preventDefault();
+            };
+            document.body.addEventListener('touchstart', function () { });
+            document.body.onbeforecopy = function () {
+                window.getSelection().removeAllRanges();
+            }
+            document.body.oncopy = function () {
+                window.getSelection().removeAllRanges();
+                return false;
+            }
+
+</script>
+
 
 </body>
 </html>
