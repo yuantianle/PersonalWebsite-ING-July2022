@@ -84,6 +84,31 @@ a { -webkit-user-select: none !important; }
 }
 
 /*-----------------------------------------
+  Scroll bar
+------------------------------------------*/
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #000000; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb { 
+  border-radius: 10px;
+  background: #5dbcbc;
+  box-shadow: inset 0 0 2px rgb(0, 0, 0);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background:  rgb(218, 216, 216); 
+}
+
+/*-----------------------------------------
   Fancy box
 ------------------------------------------*/
 a[data-fancybox] img {
@@ -553,9 +578,8 @@ flex-wrap: wrap;
 .earth_collect {
   position: relative;
   margin:0 auto;
-
-  overflow: auto;
   overscroll-behavior: contain;
+  -ms-scroll-chaining: contain;
   height:347px;
   width: 341px;
   background-color: #000000;
