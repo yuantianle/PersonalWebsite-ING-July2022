@@ -14,15 +14,14 @@ canvas{
 }
 
 #particles-js{
+  position: absolute;
   width:100%;
   height:100%;
 }
 
-h1{
-font-size: 7rem;
-position: absolute;
-top: -5%;
-left: 35%;
+.word{
+font-size: 6rem;
+position: relative;
 text-align: center;
 color: #FFF;
 font-family: teko;
@@ -34,9 +33,9 @@ text-transform: uppercase;
 
 #artsteps{
   position: absolute;
-  height: 0%;
+  height: 60%;
   width: 100%;
-  top: 20%;
+  top: 6%;
 }
 
 .mycursor

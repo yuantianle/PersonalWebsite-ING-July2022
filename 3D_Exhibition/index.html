@@ -13,10 +13,7 @@
 </head>
 
 <body >
-    <div>
-        <a class = "languagechoose1" href="javascript:tran.setLang('en');">English</a>
-        <a class = "languagechoose2" href="javascript:tran.setLang('cn');">中文</a>
-    </div>
+
     <div class= "mycursor"></div>
     <script>
         const cursor = document.querySelector('.mycursor');
@@ -30,10 +27,15 @@
         })
         })
     </script>
-    <h1>Virtual Exhibition<!--{en}Virtual Exhibition--><!--{cn}虚拟展览馆--></h1>
-    <div id="particles-js">
+    
+    <div id="particles-js">  
+        <div>
+            <a class = "languagechoose1" href="javascript:tran.setLang('en');">English</a>
+            <a class = "languagechoose2" href="javascript:tran.setLang('cn');">中文</a>
+        </div>
         <div id="artsteps">
-            <iframe width="100%" height="620" src="https://www.artsteps.com/embed/632568f73f63141cf7f30b5d/1280/720" frameborder="0" allowfullscreen></iframe>
+            <div class = "word">Virtual Exhibition<!--{en}Virtual Exhibition--><!--{cn}虚拟展览馆--></div>
+            <iframe width="100%" height="100%" src="https://www.artsteps.com/embed/632568f73f63141cf7f30b5d/1280/720" frameborder="0" allowfullscreen></iframe>
         </div>
     </div>
 <script src="./script.js"></script>    
