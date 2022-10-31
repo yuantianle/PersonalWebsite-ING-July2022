@@ -1,0 +1,241 @@
+@import url(https://fonts.googleapis.com/css?family=Teko:300,400,500,600);
+   
+html,body{ 
+  background:#000;
+}
+
+ body {
+ overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* remove canvas default margin */
+canvas{
+}
+
+#particles-js{
+  width:100%;
+  height:100%;
+}
+
+h1{
+font-size: 7rem;
+position: absolute;
+top: -5%;
+left: 35%;
+text-align: center;
+color: #FFF;
+font-family: teko;
+font-weight: 400;
+text-shadow: 5px 5px #5F6D72;
+text-transform: uppercase;
+}
+
+
+#artsteps{
+  position: absolute;
+  height: 0%;
+  width: 100%;
+  top: 20%;
+}
+
+.mycursor
+{
+   width: 30px;
+   height: 30px;
+   border: 2px solid rgb(255, 188, 4);
+   border-radius: 50%;
+   transform: translate(-50%, -50%);
+   position: absolute;
+   transition-duration: 300ms;
+   transition-timing-function: ease-out;
+   animation: cursorAnim .5s infinite alternate;
+   z-index: 1000000;
+   pointer-events: none;
+}
+.mycursor::after
+{
+  content: "";
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: .5;
+  top: -13px;
+  left: -13px;
+  animation: cursorAnim1 .5s infinite alternate;
+}
+@keyframes cursorAnim {
+    from{
+      transform: scale(1);
+    }
+    to{
+      transform: scale(.7);
+    }
+  
+}
+@keyframes cursorAnim1 {
+  from{
+    transform: scale(1);
+  }
+  to{
+    transform: scale(.4);
+  }
+
+}
+
+.expand{
+  animation: cursorAnim2 .5s forwards;
+  border: 1px solid rgb(25, 0, 255);
+}
+@keyframes cursorAnim2 {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(3);
+  }
+  100%{
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/*-----------------------------------------
+  Language transfering buttons
+------------------------------------------*/
+
+.languagechoose1{
+  margin-left:88.5%;
+  margin-right:13px;
+  font-weight: 300;
+  padding:3.5px;
+  color:#1382e9;
+  font-family:Georgia;
+  font-size: 17px;
+  text-decoration:none
+}
+ /* 鼠标移动到链接上 */
+.languagechoose1:hover {
+  color:#000000;
+  font-weight: 500;
+  padding:3.5px;
+  background-color: #B2BCC6;
+  text-decoration:none
+}  
+ /* 鼠标点击时 */
+.languagechoose1:active {
+  color:#04048a;
+}
+
+.languagechoose2{
+  margin-left:6px;
+  font-weight: 400;
+  padding:3.5px;
+  color:#d43f3a;
+  font-family:Georgia;
+  font-size:16px;
+  text-decoration:none
+}
+
+@media (min-width: 375px) {
+  .languagechoose1{
+    margin-left:63.5%;
+    margin-right:6px;
+    font-weight: 300;
+    padding:3.5px;
+    color:#1382e9;
+    font-family:Georgia;
+    font-size: 17px;
+    text-decoration:none
+  }
+}
+
+@media (min-width: 744px) {
+  .languagechoose1{
+    margin-left:81.5%;
+    margin-right:6px;
+    font-weight: 300;
+    padding:3.5px;
+    color:#1382e9;
+    font-family:Georgia;
+    font-size: 17px;
+    text-decoration:none
+  }
+}
+
+@media (min-width: 768px) {
+  .languagechoose1{
+    margin-left:81.5%;
+    margin-right:6px;
+    font-weight: 300;
+    padding:3.5px;
+    color:#1382e9;
+    font-family:Georgia;
+    font-size: 17px;
+    text-decoration:none
+  }
+}
+@media (min-width: 768px)  and (orientation: landscape){
+  .languagechoose1{
+    margin-left:86.5%;
+    margin-right:6px;
+    font-weight: 300;
+    padding:3.5px;
+    color:#1382e9;
+    font-family:Georgia;
+    font-size: 17px;
+    text-decoration:none
+  }
+}
+@media (min-width: 390px) and (orientation: landscape){
+  .languagechoose1{
+    margin-left:82%;
+    margin-right:6px;
+    font-weight: 300;
+    padding:3.5px;
+    color:#1382e9;
+    font-family:Georgia;
+    font-size: 17px;
+    text-decoration:none
+  }
+}
+
+@media (min-width: 375px)  and (orientation: landscape){
+  .languagechoose1{
+    margin-left:79.5%;
+    margin-right:6px;
+    font-weight: 300;
+    padding:3.5px;
+    color:#1382e9;
+    font-family:Georgia;
+    font-size: 17px;
+    text-decoration:none
+  }
+}
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+  .languagechoose1{
+    margin-left:88.5%;
+    margin-right:13px;
+    font-weight: 300;
+    padding:3.5px;
+    color:#1382e9;
+    font-family:Georgia;
+    font-size: 17px;
+    text-decoration:none
+  }
+}
+
+ /* 鼠标移动到链接上 */
+ .languagechoose2:hover {
+  color:#000000;
+  font-weight: 500;
+  padding:3.5px;
+  background-color: #B2BCC6;
+  text-decoration:none
+}  
+ /* 鼠标点击时 */
+.languagechoose2:active {
+  color:#810303;
+}
