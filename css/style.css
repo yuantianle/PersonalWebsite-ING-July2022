@@ -3,18 +3,7 @@
 /*
 /*	Copyright (c) 2022 Marketify
 /*	Author: Marketify
-/*	This file is made for CURRENT TEMPLATE
-01)	EDREA BASE
-02)	EDREA MOBILE MENU
-03) EDREA HEADER
-04) EDREA CONTENT
-05) EDREA HOME
-06) EDREA ABOUT
-07) EDREA PORTFOLIO
-08) EDREA NEWS
-09) EDREA CONTACT
-10) EDREA MAGIC CURSOR
-11) EDREA MEDIA QUERIES (FOR SMALL DEVIVES)
+/*
 
 /*---------------------------------------------------*/
 /*	01) EDREA BASE
@@ -199,7 +188,7 @@ h6 { font-size: 16px; }
 /*---------------------------------------------------*/
 
 .edrea_tm_content{
-	position: fixed;
+	position: absolute;
 	width: 900px;
 	top: -2%;
 	bottom: 100px;
@@ -208,7 +197,7 @@ h6 { font-size: 16px; }
 }
 .edrea_tm_section{
 	position: absolute;
-	top: 0px;
+	top: -60px;  /*place to change the content hight*/
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
@@ -278,6 +267,10 @@ h6 { font-size: 16px; }
 	color: #fff;
 	font-weight: 600;
 }
+.namec{
+	color: #eb4a4c;
+}
+
 .edrea_tm_button{
 	width: 100%;
 	height: auto;
@@ -285,9 +278,6 @@ h6 { font-size: 16px; }
 	float: left;
 	position: relative;
 	z-index: 5;
-}
-.namec{
-	color: #eb4a4c;
 }
 .edrea_tm_button a{
 	text-decoration: none;
@@ -305,12 +295,58 @@ h6 { font-size: 16px; }
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
+
 .edrea_tm_button a:hover{
-	background-color: #fff;
+	background-image: linear-gradient(to right,#03a9f4,#0319f4, #f441a5, #ff3b3b, #ffeb3b, #03a9f4);
 	color: #000;
+	background-size: 400%;
+	animation: glow 8s linear infinite;
+	z-index: 5;
+}
+
+@keyframes glow {
+	0%{
+		background-position: 0%;
+	}
+	100%{
+		background-position: 400%;
+	}
 }
 .edrea_tm_button.full a{display: block;}
 
+.edrea_tm_button a:nth-child(1):hover::before{
+    content: '';
+    background: inherit;
+    position: absolute;
+	border-radius: 50px;
+    z-index: -1;
+	filter: blur(10px);
+	padding: 25px 90px;
+	margin-top: -12px;
+	margin-left: -48px;
+}
+.edrea_tm_button a:nth-child(2):hover::before{
+    content: '';
+    background: inherit;
+    position: absolute;
+	border-radius: 50px;
+    z-index: -1;
+	filter: blur(10px);
+	padding: 25px 75px;
+	margin-top: -12px;
+	margin-left: -48px;
+}
+.edrea_tm_button a:last-child:hover::before{
+    content: '';
+    background: inherit;
+    position: absolute;
+	border-radius: 50px;
+    z-index: -1;
+	filter: blur(10px);
+	padding: 25px 122px;
+	margin-top: -12px;
+	margin-left: -48px;
+}
 
 /*---------------------------------------------------*/
 /*	Yes: CURSOR
