@@ -1673,9 +1673,9 @@ $(document).ready(function(){
  ------------------------------------------*/
 
 $(document).ready(function () {
-	imagesLoaded('body', function () {
+	imagesLoaded('projects', function () {
 		$(".page-loader div").fadeOut();
-		$(".page-loader").delay(200).fadeOut("slow");
+		$(".page-loader").delay(100).fadeOut("slow");
 	});
 });
 
