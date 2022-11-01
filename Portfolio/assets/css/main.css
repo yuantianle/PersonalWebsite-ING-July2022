@@ -514,6 +514,20 @@ flex-wrap: wrap;
   color:#810303;
 }
 
+/*-----------------------------------------
+    Project button
+------------------------------------------*/
+.project_button {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 3px 10px 0 rgba(0,0,0,0.19);
+  background-color:  #007ACC;
+  color: rgb(0, 0, 0);
+}
+
+.project_button:hover {
+  box-shadow: 0 12px 17px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  background-color: #4CAF50;
+  color: rgb(0, 0, 0);
+}
 
 /*-----------------------------------------
     Render button
@@ -3847,7 +3861,7 @@ blockquote p {
   position: relative; }
 .projects .pg-grid {
   list-style: none;
-  padding: 20px 0;
+  padding: 10px 0;
   margin: 0 auto;
   text-align: center;
   width: 100%; }
