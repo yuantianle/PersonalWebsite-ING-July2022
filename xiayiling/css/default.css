@@ -1,0 +1,322 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: rgb(0, 0, 0);
+    font-size: 12px;
+    overflow: auto;
+    background-image: url('../bg2(1).jpg');
+    background-blend-mode: hard-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#mainDiv {
+    width: 100%;
+    height: 100%
+}
+
+#loveHeart {
+    width: 0px;
+    height: 0px
+}
+
+#garden {
+    width: 100%;
+    height: 100%;
+}
+
+#elapseClock {
+    text-align: right;
+    font-size: 18px;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+#words {
+    font-family: "sans-serif";
+    width: 500px;
+    font-size: 24px;
+    color: #666
+}
+
+#messages {
+    display: none
+}
+
+#elapseClock .digit {
+    font-family: "digit";
+    font-size: 36px
+}
+
+#loveu {
+    padding: 5px;
+    font-size: 22px;
+    margin-top: 80px;
+    margin-right: 120px;
+    text-align: right;
+    display: none
+}
+
+#loveu .signature {
+    margin-top: 10px;
+    font-size: 20px;
+    font-style: italic
+}
+
+#clickSound {
+    display: none
+}
+
+#code {
+    margin-top: -50%;
+    margin-left: -15%;
+    width: 550px;
+    height: 200px;
+    color: rgb(180, 180, 180);
+    font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", "sans-serif";
+    font-size: 15px
+}
+
+#rose{
+    margin-top: -5%;
+    margin-left: 62%;
+   
+    filter: blur(0.7px) drop-shadow(6px 16px 10px rgb(5, 85, 122)) grayscale(0%);
+}
+
+#code .string {
+    color: #3294DC
+}
+
+#code .keyword {
+    color: #b86029;
+    font-weight: bold
+}
+
+#code .placeholder {
+    margin-left: 15px
+}
+
+#code .space {
+    margin-left: 7px
+}
+
+#code .comments {
+    color: #5b9b3d
+}
+
+#copyright {
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+    color: #666
+}
+
+#errorMsg {
+    width: 100%;
+    text-align: center;
+    font-size: 24px;
+    position: absolute;
+    top: 100px;
+    left: 0
+}
+
+#copyright a {
+    color: #666
+}
+
+
+
+audio{
+    margin-top: 3%;
+    margin-left: 3%;
+    height: 40px;
+    width: 250px;
+  }
+  
+  audio::-webkit-media-controls-panel {
+    background-color: #8291A1;
+  }
+  
+  audio::-webkit-media-controls-play-button {
+    background-color: #B1D4E0;
+    border-radius: 37%;
+    
+  }
+  
+  audio::-webkit-media-controls-play-button:hover {
+    background-color: #BBC5D0;
+  }
+  
+  audio::-webkit-media-controls-current-time-display {
+    color: #000000;
+    font-weight: bold;
+    text-indent: 10px;
+    text-shadow: none;
+    text-decoration: none;
+  }
+  
+  audio::-webkit-media-controls-time-remaining-display {
+    color: #000000;
+    font-weight: bold;
+    text-shadow: none;
+    text-decoration: none;
+  }
+  
+  audio::-webkit-media-controls-volume-slider {
+    background-color: #BBC5D0;
+    border-radius: 25px;
+    padding-left: 0px;
+    padding-right: 8px;
+  }
+  
+  @media (min-width: 375px) {
+    audio{
+      margin-top: 2%;
+      margin-left: 2%;
+      height: 40px;
+      width: 250px;
+    }
+  
+    audio::-webkit-media-controls-panel {
+      background-color: #4e6a7a;
+    }
+    
+    audio::-webkit-media-controls-play-button {
+      background-color: #B1D4E0;
+      border-radius: 57%;
+      size: 20px;
+    }
+    
+    audio::-webkit-media-controls-play-button:hover {
+      background-color: #BBC5D0;
+    }
+    
+    audio::-webkit-media-controls-current-time-display {
+      color: #000000;
+      font-weight: bold;
+      font-size: 13px;
+      text-indent: 5px;
+      text-shadow: none;
+      text-decoration: none;
+    }
+    
+    audio::-webkit-media-controls-time-remaining-display {
+      color: #000000;
+      font-weight: bold;
+      font-size: 13px;
+      text-shadow: none;
+      text-decoration: none;
+    }
+    
+    audio::-webkit-media-controls-volume-slider {
+      background-color: #BBC5D0;
+      border-radius: 5px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    audio::-webkit-media-controls-volume-slider:hover {
+      background-color: #e70000;
+      border-radius: 5px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+  
+  
+  @media (min-width: 768px) {
+    audio{
+      margin-top: 2%;
+      margin-left: 0%;
+      height: 40px;
+      width: 250px;
+    }
+  
+    audio::-webkit-media-controls-panel {
+      background-color: #4e6a7a;
+    }
+    
+    audio::-webkit-media-controls-play-button {
+      background-color: #B1D4E0;
+      border-radius: 57%;
+      size: 20px;
+    }
+    
+    audio::-webkit-media-controls-play-button:hover {
+      background-color: #BBC5D0;
+    }
+    
+    audio::-webkit-media-controls-current-time-display {
+      color: #000000;
+      font-weight: bold;
+      font-size: 13px;
+      text-indent: 5px;
+      text-shadow: none;
+      text-decoration: none;
+    }
+    
+    audio::-webkit-media-controls-time-remaining-display {
+      color: #000000;
+      font-weight: bold;
+      font-size: 13px;
+      text-shadow: none;
+      text-decoration: none;
+    }
+    
+    audio::-webkit-media-controls-volume-slider {
+      background-color: #BBC5D0;
+      border-radius: 5px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+    audio::-webkit-media-controls-volume-slider:hover {
+      background-color: #e70000;
+      border-radius: 5px;
+      padding-left: 0px;
+      padding-right: 0px;
+    }
+  }
+  @media screen and (min-device-width: 1200px) and (max-device-width: 1600px) {
+    audio{
+      margin-top: 3%;
+      margin-left: 3%;
+      height: 40px;
+      width: 250px;
+    }
+    
+    audio::-webkit-media-controls-panel {
+      background-color: #8291A1;
+    }
+    
+    audio::-webkit-media-controls-play-button {
+      background-color: #B1D4E0;
+      border-radius: 37%;
+      
+    }
+    
+    audio::-webkit-media-controls-play-button:hover {
+      background-color: #BBC5D0;
+    }
+    
+    audio::-webkit-media-controls-current-time-display {
+      color: #000000;
+      font-weight: bold;
+      text-indent: 10px;
+      text-shadow: none;
+      text-decoration: none;
+    }
+    
+    audio::-webkit-media-controls-time-remaining-display {
+      color: #000000;
+      font-weight: bold;
+      text-shadow: none;
+      text-decoration: none;
+    }
+    
+    audio::-webkit-media-controls-volume-slider {
+      background-color: #BBC5D0;
+      border-radius: 25px;
+      padding-left: 0px;
+      padding-right: 8px;
+    }
+  }
